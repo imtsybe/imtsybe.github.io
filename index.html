@@ -3,21 +3,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rounded Box Example</title>
+    <title>Auto Bake</title>
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400&display=swap" rel="stylesheet">
     <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffffff;
+            min-height: 100vh;
+            overflow-y: auto;
+        }
+
         .rounded-box {
             width: 100%;
-            padding: 10px;
-            background-color: #FF7E00;
-            border-radius: 15px 15px 0 0;
-            margin: 0 auto;
-            box-sizing: border-box; /* Include padding within the width */
+            padding-top: 2%;
+            background: linear-gradient(to right, #FFA11F, #FD8504);
+            border-radius: 10px 10px 0 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            box-sizing: border-box;
+            max-height: 100px;
+        }
+
+        .rounded-box-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .image-below {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(to right, #ffa51f, #FD8504);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: 'Passion One', cursive;
+            font-size: 10vw;
+            text-align: center;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+
+        hr.line-below {
+            width: 100%;
+            height: 1px;
+            border: none;
+            background-color: rgba(128, 128, 128, 0.507);
+            margin-top: 10px;
+        }
+
+        p {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            color: #333;
+            margin-top: 20px;
+            text-align: left;
+            width: 100%;
         }
     </style>
 </head>
 <body>
+
     <div class="rounded-box">
-        <!-- Content goes here -->
+        <div class="rounded-box-content">
+        </div>
     </div>
+    
+    <div class="image-container">
+        <img src="arrows.png" alt="Description of image" class="image-below">
+        <div class="overlay-text">WORKFLOW</div>
+    </div>
+
+    <p>Auto Bake is an addon for automating the processes around texture baking. Auto Bake bakes and exports textures, creates baked versions of objects with auto texture and material setups, has a built-in object exporter, and includes many more useful features. The goal of Auto Bake is to provide a fully automated, seamless workflow while ensuring simplicity and full control at every step.</p>
+
+    <hr class="line-below">
+
+    <div class="rounded-box">
+        <div class="rounded-box-content">
+        </div>
+    </div>
+    
+    <div class="image-container">
+        <img src="arrows.png" alt="Description of image" class="image-below">
+        <div class="overlay-text">MATERIAL SUPPORT</div>
+    </div>
+
+    <p>Although Auto Bake is designed around the Principled BSDF node, it can also bake other shader nodes. Some are fully supported, while others are only partially, meaning not all the input sockets can be baked. When baking Auto Bake will look for matching or similar socket names to those the Principled BSDF node. The bake type descriptions explain exactly which types bake which shader sockets.</p>
+   
+    <hr class="line-below">
+
+    <div class="rounded-box">
+        <div class="rounded-box-content">
+        </div>
+    </div>
+    
+    <div class="image-container">
+        <img src="arrows.png" alt="Description of image" class="image-below">
+        <div class="overlay-text">TEXTURE MAPS</div>
+    </div>
+
+
+
+    <hr class="line-below">
+
+    <div class="rounded-box">
+        <div class="rounded-box-content">
+        </div>
+    </div>
+    
+    <div class="image-container">
+        <img src="arrows.png" alt="Description of image" class="image-below">
+        <div class="overlay-text">BAKED VERSION</div>
+    </div>
+
+    <hr class="line-below">
+
+    <div class="rounded-box">
+        <div class="rounded-box-content">
+        </div>
+    </div>
+    
+    <div class="image-container">
+        <img src="arrows.png" alt="Description of image" class="image-below">
+        <div class="overlay-text">EXPORT</div>
+    </div>
+
+    <hr class="line-below">
+
+    <div class="rounded-box">
+        <div class="rounded-box-content">
+        </div>
+    </div>
+    
+    <div class="image-container">
+        <img src="arrows.png" alt="Description of image" class="image-below">
+        <div class="overlay-text">EASE OF USE</div>
+    </div>
+
+    <hr class="line-below">
+
+    <div class="rounded-box">
+        <div class="rounded-box-content">
+        </div>
+    </div>
+    
+    <div class="image-container">
+        <img src="arrows.png" alt="Description of image" class="image-below">
+        <div class="overlay-text">BACKGROUND BAKING</div>
+    </div>
+
+    <hr class="line-below">
+
+    <div class="rounded-box">
+        <div class="rounded-box-content">
+        </div>
+    </div>
+    
+    <div class="image-container">
+        <img src="arrows.png" alt="Description of image" class="image-below">
+        <div class="overlay-text">WORKSPACES</div>
+    </div>
+
+    <hr class="line-below">
+
+    <div class="rounded-box">
+        <div class="rounded-box-content">
+        </div>
+    </div>
+    
+    <div class="image-container">
+        <img src="arrows.png" alt="Description of image" class="image-below">
+        <div class="overlay-text">SOURCE TO TARGET</div>
+    </div>
+
+    <hr class="line-below">
+
+    <div class="rounded-box">
+        <div class="rounded-box-content">
+        </div>
+    </div>
+    
+    <div class="image-container">
+        <img src="arrows.png" alt="Description of image" class="image-below">
+        <div class="overlay-text">TEXTURE TOOLS</div>
+    </div>
+
+    <hr class="line-below">
+
+    <div class="rounded-box">
+        <div class="rounded-box-content">
+        </div>
+    </div>
+    
+    <div class="image-container">
+        <img src="arrows.png" alt="Description of image" class="image-below">
+        <div class="overlay-text">UV TOOLS</div>
+    </div>
+
+    <hr class="line-below">
+
+    <div class="rounded-box">
+        <div class="rounded-box-content">
+        </div>
+    </div>
+    
+    <div class="image-container">
+        <img src="arrows.png" alt="Description of image" class="image-below">
+        <div class="overlay-text">SUPPORT</div>
+    </div>
+
+    <hr class="line-below">
+
+    <div class="rounded-box">
+        <div class="rounded-box-content">
+        </div>
+    </div>
+    
+    <div class="image-container">
+        <img src="arrows.png" alt="Description of image" class="image-below">
+        <div class="overlay-text">REVIEWS</div>
+    </div>
+
+    <hr class="line-below">
+
+    <div class="rounded-box">
+        <div class="rounded-box-content">
+        </div>
+    </div>
+    
+    <div class="image-container">
+        <img src="arrows.png" alt="Description of image" class="image-below">
+        <div class="overlay-text">AFFILIATE</div>
+    </div>
+
 </body>
 </html>
