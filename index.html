@@ -178,11 +178,11 @@
 
     <!-- Banner style arrows on the top from the node setup to the texture setup -->
 
-    <p>Enabling a simple option will create a final material for the baked textures, and automatically set it up, connecting the textures to their corresponding shader socket, and positioning the nodes.</p>
+    <p>Enabling a single option will create a <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/material/final" target="_blank" class="text-link">final material</a> for the baked textures, and <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/material/final#apply-textures" target="_blank" class="text-link">automatically set it up</a>, connecting the textures to their corresponding shader socket, and positioning the nodes.</p>
 
     <!-- Texture setup system, maybe an AO node, base color, normal, roughness, maybe something else -->
 
-    <p>With another option enabled, Auto Bake will not only set up the textures and materials, but it will also create a baked version of the object(s), applying the final material, and replace the final object with the orignal object.</p>
+    <p>With another option enabled, Auto Bake will not only set up the textures and materials, but it will also create a <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/object/final" target="_blank" class="text-link">baked version</a> of the object(s), applying the <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/material/final" target="_blank" class="text-link">final material</a>, and then to <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/bake-and-export/queue#confirm" target="_blank" class="text-link">replace</a> the original object with the baked object.</p>
 
     <hr class="line-below">
 
@@ -193,11 +193,11 @@
         <div class="overlay-text">EXPORT</div>
     </div>
 
-    <p>Auto Bake gives the option to export either or both the baked textures and the objects with a single button, with your own custom export settings. You can choose different file format both for the textures and objects.</p>
+    <p>Auto Bake gives the option to <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/bake-and-export/export" target="_blank" class="text-link">export</a> either or both the baked textures and the objects with a single button, with your own custom export settings. You can choose different file format both for the <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/image/export" target="_blank" class="text-link">textures</a> and <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/object/export" target="_blank" class="text-link">objects</a>.</p>
 
     <!-- Export gif  -->
 
-    <p>Options are also provided for folder control. Master folder can be enabled to place both the object and its textures in, and a subfolders option can also be enabled to organize the textures by type.</p>
+    <p>Options are also provided for <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/path#folder" target="_blank" class="text-link">folder control</a>. <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/path#create-master" target="_blank" class="text-link">Master folder</a> can be enabled to place both the object and its textures in, and a <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/path#subfolders" target="_blank" class="text-link">subfolders</a> option can also be enabled to organize the textures by type.</p>
 
     <hr class="line-below">
 
@@ -208,8 +208,19 @@
         <div class="overlay-text">WORKSPACE</div>
     </div>
 
-    <p>You have the option to choose the workspace you want to use Auto Bake from. You can use it either from the Render properties where you would normally bake, or from the 3D viewport's sidebar, or even from the Shader Editor's sidebar. The decision is yours, select the one you prefer!</p>
+    <p>You have the option to <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/preferences/interface#panel-location" target="_blank" class="text-link">choose the workspace</a> you want to use Auto Bake from. You can use it either from the Render properties where you would normally bake, or from the 3D viewport's sidebar, or even from the Shader Editor's sidebar. The decision is yours, select the one you prefer!</p>
     
+    <hr class="line-below">
+
+    <div class="rounded-box"></div>
+    
+    <div class="image-container">
+        <img src="arrows.png" alt="" class="image-below">
+        <div class="overlay-text">BAKE PROGRESS</div>
+    </div>
+
+    <p>Keep using Blender! When baking textures are being baked in the background, so Blender won't freeze. The progress of the bakes can be seen in the <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/bake-and-export/queue#queue-panel" target="_blank" class="text-link">Queue panel</a>.</p>
+
     <hr class="line-below">
 
     <div class="rounded-box"></div>
@@ -219,7 +230,15 @@
         <div class="overlay-text">SOURCE TO TARGET</div>
     </div>
 
-    <p>Text</p>
+    <!-- <a href="" target="_blank" class="text-link"></a>
+    <a href="" target="_blank" class="text-link"></a>
+    <a href="" target="_blank" class="text-link"></a>
+    <a href="" target="_blank" class="text-link"></a> -->
+
+    <p>Baking textures from source objects is not only supported but it has many smart functions. Other than the default method, 
+        
+        
+        You can bake from source to target by the default way of selecting the source and target objects in the viewport and hittin the bake button or with the advanced method. </p>
 
     <hr class="line-below">
 
@@ -253,17 +272,6 @@
     </div>
 
     <p>Text</p>
-
-    <hr class="line-below">
-
-    <div class="rounded-box"></div>
-    
-    <div class="image-container">
-        <img src="arrows.png" alt="" class="image-below">
-        <div class="overlay-text">BAKE PROGRESS</div>
-    </div>
-
-    <p>Keep using Blender! When baking textures are being baked in the background, so Blender won't freeze. The progress of the bakes can be seen in the Queue panel.</p>
 
     <hr class="line-below">
 
