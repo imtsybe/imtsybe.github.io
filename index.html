@@ -60,10 +60,11 @@
         }
 
         .rounded-image {
-            width: 100%;
+            max-width: 100%;
             height: auto;
-            object-fit: cover;
-            border-radius: 4px;
+            margin: auto;
+            display: block;
+            border-radius: .5vh;
         }
 
         .overlay-text {
@@ -108,7 +109,7 @@
 <body>
 
     <div class="intro-box">
-        <b>Auto Bake is a very capable but easy to use texture baker add-on with the goal to provide a fully automated, seamless workflow while ensuring simplicity and full control. It can also export textures, create a baked version of the objectss with automatic texture setup, export the baked objects, supports advanced materials, and a lot more!
+        <b>Auto Bake is a capable but easy to use texture baker add-on with the goal to provide a fully automated, seamless workflow while ensuring simplicity and full control. It can also export textures, create a baked version of the objectss with automatic texture setup, export the baked objects, supports advanced materials, and a lot more!
         </b>
     </div>
 
@@ -121,7 +122,7 @@
         <div class="overlay-text">WORKFLOW</div>
     </div>
 
-    <p>You can <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/bake-list" target="_blank" class="text-link">set up a bake list</a> for the textures, then by just simply selecting the objects in the viewport you want to bake, the bake is ready to be started. After the bakes are finished, a baked version of the objects are created with the baked <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/material/final#apply-textures" target="_blank" class="text-link">textures automatically applied</a>. The baked <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/bake-and-export/export" target="_blank" class="text-link">textures and objects can then be exported</a> with a single button with your custom export settings.</p>
+    <p>You <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/bake-list" target="_blank" class="text-link">set up a bake list</a> for the textures, then by just simply selecting the objects in the viewport you want to bake, the bake is ready to be started. After the bakes are finished, a baked version of the objects are created with the baked <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/material/final#apply-textures" target="_blank" class="text-link">textures automatically applied</a>. The baked <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/bake-and-export/export" target="_blank" class="text-link">textures and objects can then be exported</a> with a single button with your custom export settings.</p>
 
     <!-- Video of the steps -->
 
@@ -160,7 +161,7 @@
         <div class="overlay-text">MATERIAL SUPPORT</div>
     </div>
 
-    <p>Auto Bake is designed around the Principled BSDF node, but that does not limits its capibility, in fact all the other shader nodes are supported. While some shaders are fully supported some are partially, depending on the shader's input sockets, if the socket has a matching pair with one of the Principled BSDF's then its supported.</p>
+    <p>Although Auto Bake is designed around the Principled BSDF node, but that does not limits its capibility, in fact all the other shader nodes are supported. While some shaders are fully supported some are partially, depending on the shader's input sockets, if the socket has a matching pair with one of the Principled BSDF's then its supported.</p>
 
     <!-- Animated socket circles for the partially supperted shader example -->
     <!-- large Animated checkmark for the fully supported shader -->
@@ -168,6 +169,9 @@
     <!-- Eample of partially supported -->
 
     <!-- sheen bsdf vs toon bsdf -->
+     <!-- node setup examples -->
+     <img src="node_setup.gif" alt="" class="rounded-image" style="height: 300px; width: auto;">
+     <!--  -->
    
     <hr class="line-below">
 
