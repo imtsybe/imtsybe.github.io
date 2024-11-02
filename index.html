@@ -59,7 +59,7 @@
             object-fit: cover;
         }
 
-        .rounded-image {
+        .rounded-media {
             max-width: 100%;
             height: auto;
             margin: auto;
@@ -102,7 +102,6 @@
             width: 100%;
             font-weight: bold;
         }
-
 
     </style>
 </head>
@@ -148,7 +147,7 @@
     
     <p>A wide variety of textures can be baked with Auto Bake, including <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/bake-list/list-items#shader" target="_blank" class="text-link">shader sockets</a>, <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/bake-list/list-items#multiresolution" target="_blank" class="text-link">multiresolution modifier data</a>, <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/bake-list/list-items#standard" target="_blank" class="text-link">Blender's default bake passes</a>, and a set of <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/bake-list/list-items#miscellaneous" target="_blank" class="text-link">miscellaneous</a> bake types for channel packing, pointiness, bevel and more!</p>
 
-    <a href="https://imtsybe.github.io/bake_types.png" target="_blank"><img src="bake_types.png" alt="" class="rounded-image"></a>
+    <a href="https://imtsybe.github.io/bake_types.png" target="_blank"><img src="bake_types.png" alt="" class="rounded-media"></a>
 
     <hr class="line-below">
 
@@ -165,7 +164,7 @@
 
     <p>Although the texture maps are designed around the Principled BSDF node, it also supports all the other shaders, some fully and some partially extent, depending on the shader's input sockets. If a socket has a matching pair with one of the Principled BSDF's socket, then it can be baked.</p>
 
-    <img src="node_setup.gif" alt="" class="rounded-image">
+    <img src="node_setup.gif" alt="" class="rounded-media">
    
     <hr class="line-below">
 
@@ -235,10 +234,41 @@
     <a href="" target="_blank" class="text-link"></a>
     <a href="" target="_blank" class="text-link"></a> -->
 
-    <p>Baking textures from source objects is not only supported but it has many smart functions. Other than the default method, 
+    <p>Baking textures from source objects is not only supported but also has a few smart functions, including cage object generator, extrusion visualizer and more!
+        
+    </p>
+    <p>
+
+    You can select between two methods for baking with source to target, either the standard, or the advanced method. The standard method is the default viewport object selection, while with the advanced method you can set up multiple target objects in a list with their source objects and settings each.
+        
+
+
+
         
         
-        You can bake from source to target by the default way of selecting the source and target objects in the viewport and hittin the bake button or with the advanced method. </p>
+        <!-- You have the option to use the default method of selecting the source and target objects in the viewport,
+
+    or by using the advanced method where you can set up a list of target objects with custom
+
+        It can bake either by using the default method of selecting the objects in the viewport, or by using Auto Bake's advanced method. This method 
+        
+        object selection is not only supported but it has many smart functions. Other than the default method, 
+        
+        
+        You can bake from source to target by the default way of selecting the source and target objects in the viewport and hittin the bake button or with the advanced method. -->
+
+    </p>
+
+
+    <!-- <video width="100%" height="auto" autoplay loop muted>
+        <source src="extrusion_visualizer.mp4" type="video/mp4">
+    </video> -->
+
+    <video class="rounded-media" autoplay loop muted>
+        <source src="extrusion_visualizer.mp4" type="video/mp4">
+    </video>
+    
+
 
     <hr class="line-below">
 
