@@ -155,17 +155,17 @@
     <div class="rounded-box"></div>
     
     <div class="image-container">
-
         <img src="arrows.png" alt="" class="image-below">
-
         <div class="overlay-text">MATERIAL SUPPORT</div>
     </div>
 
-    <p>Although Auto Bake is designed around the Principled BSDF node, but that does not limits its capibility, in fact all the other shader nodes are also supported. While some shaders are fully supported some are partially, depending on the shader's input sockets, an example to this can be the Glass BSDF and the Toon BSDF. If the socket has a matching pair with the Principled BSDF's sockets then that is also supported.</p>
+    <p>Auto Bake is designed both for the very basic single material per objects and for the advanced setups with multiple materials per object. The materials can also vary from a single shader node to the complex node setups with shader mixing and node groups.</p>
+
+    <!-- Example image of an advanced material node setup with two Principled BSDFs and with one also using a node group -->
+
+    <p>Although the texture maps are designed around the Principled BSDF node, it also supports all the other shaders, some fully and some partially extent, depending on the shader's input sockets. If a socket has a matching pair with one of the Principled BSDF's socket, then it can be baked.</p>
 
     <img src="node_setup.gif" alt="" class="rounded-image">
-
-    <p style="margin-top: 10px;">Other than supporting different shader types, objects can also have multiple materials with advanced node setups. You can mix and add shaders, or use node groups.</p>
    
     <hr class="line-below">
 
@@ -178,7 +178,11 @@
 
     <!-- Banner style arrows on the top from the node setup to the texture setup -->
 
-    <p>Text</p>
+    <p>Enabling a simple option will create a final material for the baked textures, and automatically set it up, connecting the textures to their corresponding shader socket, and positioning the nodes.</p>
+
+    <!-- Texture setup system, maybe an AO node, base color, normal, roughness, maybe something else -->
+
+    <p>With another option enabled, Auto Bake will not only set up the textures and materials, but it will also create a baked version of the object(s), applying the final material, and replace the final object with the orignal object.</p>
 
     <hr class="line-below">
 
@@ -189,7 +193,11 @@
         <div class="overlay-text">EXPORT</div>
     </div>
 
-    <p>Text</p>
+    <p>Auto Bake gives the option to export either or both the baked textures and the objects with a single button, with your own custom export settings. You can choose different file format both for the textures and objects.</p>
+
+    <!-- Export gif  -->
+
+    <p>Options are also provided for folder control. Master folder can be enabled to place both the object and its textures in, and a subfolders option can also be enabled to organize the textures by type.</p>
 
     <hr class="line-below">
 
@@ -197,10 +205,10 @@
     
     <div class="image-container">
         <img src="arrows.png" alt="" class="image-below">
-        <div class="overlay-text">BACKGROUND BAKING</div>
+        <div class="overlay-text">BAKE PROGRESS</div>
     </div>
 
-    <p>Text</p>
+    <p>Keep using Blender! When baking textures are being baked in the background, so Blender won't freeze. The progress of the bakes can be seen in the Queue panel.</p>
 
     <hr class="line-below">
 
@@ -211,7 +219,7 @@
         <div class="overlay-text">WORKSPACES</div>
     </div>
 
-    <p>Text</p>
+    <p>Choose your workspace! Auto Bake provide you three different workspace to use Auto Bake from. You can either use it from the Render properties, where you would normally bake, or from the 3D viewport, or even from the Shader Editor. The choice is yours!</p>
     
     <hr class="line-below">
 
