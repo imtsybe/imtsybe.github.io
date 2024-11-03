@@ -47,12 +47,13 @@ body {
 }
 
 .rounded-media {
+    box-sizing: border-box;
     max-width: 100%;
     height: auto;
     margin: 0px 0px 10px 0px;
     display: block;
     border-radius: 6px;
-    border: 1.75px solid #fa772bb5;
+    border: 2px solid #fa912bc7;
 }
 
 .overlay-text {
