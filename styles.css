@@ -133,8 +133,11 @@ p {
     font-family: 'Passion One', cursive;
     pointer-events: none;
     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    
+    border-radius: 12px;
 }
 
 .media-item:hover .overlay {
     opacity: 1;
+    /* padding: 10px; */
 }
