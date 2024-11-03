@@ -12,7 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
-<body>
+
+
+
+<body >
 
     <div class="intro-box">
         <b>Auto Bake is a capable but easy to use texture baker add-on with the goal to provide a fully automated, seamless workflow while ensuring simplicity and full control. It can also export textures, create a baked version of the objectss with automatic texture setup, export the baked objects, supports advanced materials, and a lot more!
@@ -152,8 +155,13 @@
     </div>
 
 
+
     <p> You can choose between the default method of selecting the target and source objects in the viewport, or you can use Auto Bake's advanced method, with you can set up multiple target objects with their own source objects and settings each.</p>
         
+
+
+    <video class="rounded-media" src="extrusion_visualizer.mp4" alt="Image 3" autoplay loop muted></video>
+
 
     <p>
     
@@ -256,5 +264,49 @@
         <div class="overlay-text">AFFILIATE</div>
     </div>
 
+
+
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <img class="modal-content" id="media-focus">
+  </div>
+  
+
+
+
+<script>
+  // Get the modal and modal image
+  var modal = document.getElementById("myModal");
+  var modalImg = document.getElementById("media-focus");
+  
+  // Function to open the modal
+  function openModal(image) {
+    modal.style.display = "block";
+    modalImg.src = image.src;
+  }
+  
+  // Add click event listener to the body
+  document.body.addEventListener("click", function(event) {
+    // Check if the clicked element is an image
+    if (event.target.classList.contains("rounded-media")) {
+      if (modal.style.display === "block") {
+        modal.style.display = "none"; // Close modal if it's already open
+      } else {
+        openModal(event.target); // Open modal with the clicked image
+      }
+    }
+  });
+  
+  // When the user clicks anywhere on the modal, close it
+  modal.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+</script>
+
+
+    
 </body>
 </html>
