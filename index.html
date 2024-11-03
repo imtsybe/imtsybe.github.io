@@ -6,105 +6,11 @@
     
     <title>Auto Bake</title>
 
+    <link rel="stylesheet" href="styles.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
-
-    <style>
-        body {
-            margin: 0;
-            background-color: #ffffff;
-            overflow-y: auto;
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            flex-direction: column;
-        }
-
-        .intro-box {
-            width: 100%;
-            padding: 2%;
-            background: linear-gradient(to right, #FFA11F, #FD8504);
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            position: relative;
-            box-sizing: border-box;
-
-            font-family: Poppins, sans-serif;
-            font-size: 14px;
-            color: #ffffff;
-            text-align: justify;
-            width: 100%;
-        }
-
-        .rounded-box {
-            width: 100%;
-            padding-top: 2%;
-            background: linear-gradient(to right, #FFA11F, #FD8504);
-            border-radius: 10px 10px 0 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            position: relative;
-            box-sizing: border-box;
-            max-height: 100px;
-        }
-
-        .image-container {
-            position: relative;
-            width: 100%;
-        }
-
-        .image-below {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
-
-        .rounded-media {
-            max-width: 100%;
-            height: auto;
-            margin: 0px 0px 10px 0px;
-            
-            display: block;
-            border-radius: 6px;
-        }
-
-        .overlay-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: linear-gradient(to right, #ffa51f, #FD8504);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-family: 'Passion One', cursive;
-            font-size: 10vw;
-            text-align: center;
-            white-space: nowrap;
-        }
-
-        hr.line-below {
-            width: 100%;
-            height: 1px;
-            border: none;
-            background-color: rgba(128, 128, 128, 0.507);
-            margin: 0px 0px 7.5px 0px;
-        }
-
-        .text-link {
-            color: #c26e00ba;
-        }
-
-        p {
-            font-family: Poppins, sans-serif;
-            font-size: 13px;
-            color: #c26e00ba;
-            margin: 0px 0px 10px 0px;
-            text-align: justify;
-            width: 100%;
-            font-weight: bold;
-        }
-
-    </style>
 </head>
 <body>
 
@@ -232,12 +138,28 @@
     <a href="" target="_blank" class="text-link"></a>
     <a href="" target="_blank" class="text-link"></a> -->
 
-    <p>Baking textures from source objects is not only supported but also has a few smart functions, including cage object generator, extrusion visualizer and more!
-        
-    </p>
-    <p>
+    <p>Baking textures from source objects is not only supported but also has a few useful functions, including cage object generator, extrusion visualizer and more!</p>
 
-    You can select between two methods for baking with source to target, either the standard, or the advanced method. The standard method is the default viewport object selection, while with the advanced method you can set up multiple target objects in a list with their source objects and settings each.
+    <div class="media-row">
+        <div class="media-item">
+            <video src="extrusion_visualizer.mp4" alt="Image 3" autoplay loop muted></video>
+            <div class="overlay">Image 3</div>
+        </div>
+        <div class="media-item">
+            <video src="extrusion_visualizer.mp4" alt="Image 3" autoplay loop muted></video>
+            <div class="overlay">Image 3</div>
+        </div>
+    </div>
+
+
+    <p> You can choose between the default method of selecting the target and source objects in the viewport, or you can use Auto Bake's advanced method, with you can set up multiple target objects with their own source objects and settings each.</p>
+        
+
+    <p>
+    
+    This method will try to find the cage and all the source objects, based on the target object, settings them up automatically.
+
+    <!-- You can select between two methods for baking with source to target, either the standard, or the advanced method. The standard method is the default viewport object selection, while with the advanced method you can set up multiple target objects in a list with their source objects and settings each. -->
         
 
 
@@ -262,10 +184,12 @@
         <source src="extrusion_visualizer.mp4" type="video/mp4">
     </video> -->
 
-    <video class="rounded-media" autoplay loop muted>
-        <source src="extrusion_visualizer.mp4" type="video/mp4">
-    </video>
-    
+
+
+
+
+
+
 
 
     <hr class="line-below">
