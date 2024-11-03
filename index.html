@@ -13,8 +13,6 @@
 
 </head>
 
-
-
 <body >
 
     <div class="intro-box">
@@ -59,6 +57,10 @@
 
     <a href="https://imtsybe.github.io/bake_types.png" target="_blank"><img src="bake_types.png" alt="" class="rounded-media"></a>
     
+    <a href="https://imtsybe.github.io/bake_types.png" target="_blank"><img src="bake_types.png" alt="" class="rounded-media" onclick="this.requestFullscreen()"/>></a>
+    
+
+
     <hr class="line-below">
     
     <div class="rounded-box"></div>
@@ -263,76 +265,6 @@
         <img src="arrows.png" alt="" class="image-below">
         <div class="overlay-text">AFFILIATE</div>
     </div>
-
-
-
-
-
-
-
-<div id="myModal" class="modal">
-    <img class="modal-content" id="media-focus">
-    <video class="modal-content" id="video-focus" autoplay loop muted style="display: none;"></video>
-    </div>
-    
-    
-    <script>
-    
-    var modal = document.getElementById("myModal");
-    var modalImg = document.getElementById("media-focus");
-    var modalVideo = document.getElementById("video-focus");
-    
-    // Function to open the modal
-    function openModal(image) {
-    modal.style.display = "block";
-    modalImg.src = image.src;
-    }
-    
-    function openModal(media) {
-    modal.style.display = "block";
-    
-    if (media.tagName === 'IMG') {
-        modalImg.src = media.src;
-        modalImg.style.display = "block"; // Show image
-        modalVideo.style.display = "none"; // Hide video
-        
-    } else if (media.tagName === 'VIDEO') {
-        modalVideo.src = media.src;
-        modalVideo.style.display = "block"; // Show video
-        modalImg.style.display = "none"; // Hide image
-    }
-    }
-    
-    
-    // Event listener
-    document.body.addEventListener("click", function(event) {
-    if (event.target.classList.contains("rounded-media")) {
-        if (modal.style.display === "block") {
-        modal.style.display = "none"; // Close modal if open
-        modalVideo.pause(); // Pause video when closing modal
-        modalVideo.src = ""; // Reset video source
-        } else {
-        openModal(event.target); // Open modal
-        }
-    }
-    });
-    
-    
-    // When the user clicks anywhere on the modal, close it
-    modal.onclick = function() {
-    modal.style.display = "none";
-    modalVideo.pause(); // Pause video when closing modal
-    modalVideo.src = ""; // Reset video source
-    }
-    
-    
-    </script>
-
-
-
-
-
-
 
 
 
