@@ -17,13 +17,13 @@ hr.line-below {
 }
 
 .text-link {
-    color: #c26e00ba;
+    color: #c28500ba;
 }
 
 p {
     font-family: Poppins, sans-serif;
     font-size: 13px;
-    color: #c26e00ba;
+    color: #c28500ba;
     margin: 0px 0px 10px 0px;
     text-align: justify;
     width: 100%;
@@ -33,7 +33,7 @@ p {
 .intro-box {
     width: 100%;
     padding: 2%;
-    background: linear-gradient(to right, #ffab1f, #FD8504);
+    background: linear-gradient(to right, #ffba00, #fd7804);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
@@ -49,7 +49,7 @@ p {
 .rounded-box {
     width: 100%;
     padding-top: 2%;
-    background: linear-gradient(to right, #ffab1f, #FD8504);
+    background: linear-gradient(to right, #ffba00, #fd7804);
     border-radius: 10px 10px 0 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
@@ -114,7 +114,7 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: linear-gradient(to right, #ffab1f, #FD8504);
+    background: linear-gradient(to right, #ffba00, #fd7804);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Passion One', cursive;
