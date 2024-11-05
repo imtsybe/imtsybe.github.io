@@ -25,11 +25,11 @@
 
 <!-- Video of the steps -->
     <div>
-        <div class="rounded-box"></div>
+        <div class="header-top"></div>
         
-        <div class="image-container">
-            <img src="media/arrows.png" alt="" class="image-below">
-            <div class="overlay-text">WORKFLOW</div>
+        <div class="header">
+            <img src="media/arrows.png" alt="" class="header-image">
+            <div class="header-text">WORKFLOW</div>
         </div>
 
         <p>You <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/bake-list" target="_blank" class="text-link">set up a bake list</a> for the textures, then by just simply selecting the objects in the viewport you want to bake, the bake is ready to be started. After the bakes are finished, a baked version of the objects are created with the baked <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/material/final#apply-textures" target="_blank" class="text-link">textures automatically applied</a>. The baked <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/bake-and-export/export" target="_blank" class="text-link">textures and objects can then be exported</a> with a single button with your custom export settings.</p>
@@ -38,11 +38,11 @@
     </div>
 
     <div>
-        <div class="rounded-box"></div>
+        <div class="header-top"></div>
         
-        <div class="image-container">
-            <img src="media/arrows.png" alt="" class="image-below">
-            <div class="overlay-text">EASE OF USE</div>
+        <div class="header">
+            <img src="media/arrows.png" alt="" class="header-image">
+            <div class="header-text">EASE OF USE</div>
         </div>
 
         <p>Auto Bake is designed for both beginners and advanced users in mind. The panels and their content are thoughtly organized, the buttons and options are enchanced with <a href="https://tsybe.gitbook.io/auto-bake/documentation/tips-and-tricks#tooltips-and-help" target="_blank" class="text-link">tooltips</a> to help understand them. The <a href="https://tsybe.gitbook.io/auto-bake" target="_blank" class="text-link">documentation</a> explains the buttons and options in great details and with examples.</p>
@@ -51,91 +51,83 @@
     
     <div>
         <hr class="line-below">
-        <div class="rounded-box"></div>
+        <div class="header-top"></div>
         
-        <div class="image-container">
-            <img src="media/arrows.png" alt="" class="image-below">
-            <div class="overlay-text">TEXTURE MAPS</div>
+        <div class="header">
+            <img src="media/arrows.png" alt="" class="header-image">
+            <div class="header-text">TEXTURE MAPS</div>
         </div>
         
         <p>A wide variety of textures can be baked with Auto Bake, including <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/bake-list/list-items#shader" target="_blank" class="text-link">shader sockets</a>, <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/bake-list/list-items#multiresolution" target="_blank" class="text-link">multiresolution modifier data</a>, <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/bake-list/list-items#standard" target="_blank" class="text-link">Blender's default bake passes</a>, and a set of <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/bake-list/list-items#miscellaneous" target="_blank" class="text-link">miscellaneous</a> bake types for channel packing, pointiness, bevel and more!</p>
         
-        <div class="media-item">
-            <div class="rounded-media">
-                <div class="zoom-container">
-                    <a href="https://imtsybe.github.io/media/bake_types.png" target="_blank"><img src="media/bake_types.png" class="rounded-media"></a>
-                </div>
+        <div class="media-row">
+            <div class="container">
+                <a href="https://imtsybe.github.io/media/bake_types.png" target="_blank"><img src="media/bake_types.png" class="media"></a>
+                <div class="media-overlay">Bakeable Texture Maps</div>
             </div>
-            <div class="overlay">Bakeable Texture Maps</div>
-        </div>
+        </div> 
 
     </div>
     
     <div>
         <hr class="line-below">
-        <div class="rounded-box"></div>
-        <div class="image-container">
-            <img src="media/arrows.png" alt="" class="image-below">
-            <div class="overlay-text">MATERIAL SUPPORT</div>
+        <div class="header-top"></div>
+        <div class="header">
+            <img src="media/arrows.png" alt="" class="header-image">
+            <div class="header-text">MATERIAL SUPPORT</div>
         </div>
         
         <p>Auto Bake is designed both for the very basic single material per objects and for the advanced setups with multiple materials per object. The materials can also vary from a single shader node to the complex node setups with shader mixing and node groups.</p>
-        
-        <div class="media-item">
-            <div class="rounded-media">
-                <div class="zoom-container">
-                    <a href="https://imtsybe.github.io/media/material_setup.png" target="_blank"><img src="media/material_setup.png" class="rounded-media"></a>
-                </div>
+
+        <div class="media-row">
+            <div class="container">
+                <a href="https://imtsybe.github.io/media/material_setup.png" target="_blank"><img src="media/material_setup.png" class="media"></a>
+                <div class="media-overlay">Node Setup Example</div>
             </div>
-            <div class="overlay">Node Setup Example</div>
-        </div>
+        </div> 
         
         <p>Although the texture maps are designed around the Principled BSDF node, it also supports all the other shaders, some fully and some partially extent, depending on the shader's input sockets. If a socket has a matching pair with one of the Principled BSDF's socket, then it can be baked.</p>
-        
-        <div class="media-item">
-            <div class="rounded-media">
-                <div class="zoom-container">
-                    <a href="https://imtsybe.github.io/media/node_setup.gif" target="_blank"><img src="media/node_setup.gif" class="rounded-media"></a>
-                </div>
+    
+        <div class="media-row">
+            <div class="container">
+                <a href="https://imtsybe.github.io/media/node_setup.gif" target="_blank"><img src="media/node_setup.gif" class="media"></a>
+                <div class="media-overlay">Fully & Partially Supported Examples</div>
             </div>
-            <div class="overlay">Fully & Partially Supported Examples</div>
-        </div>
+        </div> 
             
     </div>
     
-<!-- Banner style arrows on the top from the node setup to the texture setup -->
-<!-- Texture setup system, maybe an AO node, base color, normal, roughness, maybe something else -->
+<!-- Another version where the image is horizontally split the left for the original and the baked object, while the right is the shader editor and switching back and forth between the two objects and its materials -->
     <div>
         <hr class="line-below">
-        <div class="rounded-box"></div>
+        <div class="header-top"></div>
         
-        <div class="image-container">
-            <img src="media/arrows.png" alt="" class="image-below">
-            <div class="overlay-text">BAKED VERSIONS</div>
+        <div class="header">
+            <img src="media/arrows.png" alt="" class="header-image">
+            <div class="header-text">BAKED VERSIONS</div>
         </div>
         
         <p>By enabling a single option, Auto Bake will create a <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/material/final" target="_blank" class="text-link">final material</a> for the baked textures, and <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/material/final#apply-textures" target="_blank" class="text-link">automatically set them up</a>, connecting them to their corresponding input socket of the shader.  node with the nodes aligned.</p>
 
-        <div class="media-item">
-            <div class="rounded-media">
-                <div class="zoom-container">
-                    <a href="https://imtsybe.github.io/media/material_compare.mp4" target="_blank"><video src="media/material_compare.mp4" class="rounded-media" autoplay loop muted></video></a>
-                </div>
+        <div class="media-row">
+            <div class="container">
+                <a href="https://imtsybe.github.io/media/material_compare.mp4" target="_blank"><video src="media/material_compare.mp4" class="media" autoplay loop muted></video></a>
+                <div class="media-overlay">Automatic Texture Setup</div>
             </div>
-            <div class="overlay">Automatic Texture Setup</div>
-        </div>
+        </div> 
 
         <p>With another option enabled, Auto Bake will not only set up the materials and textures, but it will also create a <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/object/final" target="_blank" class="text-link">baked version</a> of the object(s), applying the <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/material/final" target="_blank" class="text-link">final material</a>, and then the original object can be replaced with the baked object using the <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/bake-and-export/queue#confirm" target="_blank" class="text-link">confirm button</a>.</p>
+
     </div>
-      
-<!-- Export example -->
+
+<!-- Export process example -->
     <div>
         <hr class="line-below">
-        <div class="rounded-box"></div>
+        <div class="header-top"></div>
         
-        <div class="image-container">
-            <img src="media/arrows.png" alt="" class="image-below">
-            <div class="overlay-text">EXPORT</div>
+        <div class="header">
+            <img src="media/arrows.png" alt="" class="header-image">
+            <div class="header-text">EXPORT</div>
         </div>
 
         <p>Auto Bake gives the option to <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/bake-and-export/export" target="_blank" class="text-link">export</a> either or both the baked textures and the objects with a single button, with your own custom export settings. You can choose different file format both for the <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/image/export" target="_blank" class="text-link">textures</a> and <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/object/export" target="_blank" class="text-link">objects</a>.</p>
@@ -145,53 +137,40 @@
 
     <div>
         <hr class="line-below">
-        <div class="rounded-box"></div>
+        <div class="header-top"></div>
         
-        <div class="image-container">
-            <img src="media/arrows.png" alt="" class="image-below">
-            <div class="overlay-text">WORKSPACES</div>
+        <div class="header">
+            <img src="media/arrows.png" alt="" class="header-image">
+            <div class="header-text">WORKSPACES</div>
         </div>
 
         <p>You have the option to <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/preferences/interface#panel-location" target="_blank" class="text-link">choose the workspace</a> you want to use Auto Bake from. You can use it either from the Render properties where you would normally bake, or from the 3D viewport's sidebar, or even from the Shader Editor's sidebar. The decision is yours, select the one you prefer!</p>
         
         <div class="media-row">
-            <div class="media-item">
-                <div class="rounded-media">
-                    <div class="zoom-container">
-                        <a href="https://imtsybe.github.io/media/render_properties_focus.png" target="_blank"><img src="media/render_properties_focus.png" class="rounded-media"></a>
-                    </div>
-                </div>
-                <div class="overlay">Render Properties</div>
+            <div class="container">
+                <a href="https://imtsybe.github.io/media/render_properties_focus.png" target="_blank"><img src="media/render_properties_focus.png" class="media"></a>
+                <div class="media-overlay">Render Properties</div>
             </div>
+            <div class="container" >
+                <a href="https://imtsybe.github.io/media/3d_viewport_focus.png" target="_blank"><img src="media/3d_viewport_focus.png" class="media"></a>
+                <div class="media-overlay">3D Viewport</div>
+            </div>
+            <div class="container">
+                <a href="https://imtsybe.github.io/media/shader_editor_focus.png" target="_blank"><img src="media/shader_editor_focus.png" class="media"></a>
+                <div class="media-overlay">Shader Editor</div>
+            </div>
+        </div> 
 
-            <div class="media-item">
-                <div class="rounded-media">
-                    <div class="zoom-container">
-                        <a href="https://imtsybe.github.io/media/3d_viewport_focus.png" target="_blank"><img src="media/3d_viewport_focus.png" class="rounded-media"></a>
-                    </div>
-                </div>
-                <div class="overlay">3D Viewport</div>
-            </div>
-
-            <div class="media-item">
-                <div class="rounded-media">
-                    <div class="zoom-container">
-                        <a href="https://imtsybe.github.io/media/shader_editor_focus.png" target="_blank"><img src="media/shader_editor_focus.png" class="rounded-media"></a>
-                    </div>
-                </div>
-                <div class="overlay">Shader Editor</div>
-            </div>
-        </div>
     </div>
 
     <!-- gif here of the bake queue -->
     <div>
         <hr class="line-below">
-        <div class="rounded-box"></div>
+        <div class="header-top"></div>
         
-        <div class="image-container">
-            <img src="media/arrows.png" class="image-below">
-            <div class="overlay-text">BAKE QUEUE</div>
+        <div class="header">
+            <img src="media/arrows.png" class="header-image">
+            <div class="header-text">BAKE QUEUE</div>
         </div>
 
         <p>Keep using Blender! When baking textures are being baked in the background, so Blender won't freeze. The progress of the bakes can be seen in the <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/bake-and-export/queue#queue-panel" target="_blank" class="text-link">Queue panel</a>.</p>
@@ -207,46 +186,26 @@ You can bake from source to target by the default way of selecting the source an
 <!-- move down the extrusion and cage object parts they are only secondary information -->
     <div>
         <hr class="line-below">
-        <div class="rounded-box"></div>
+        <div class="header-top"></div>
         
-        <div class="image-container">
-            <img src="media/arrows.png" alt="" class="image-below">
-            <div class="overlay-text">SOURCE TO TARGET</div>
+        <div class="header">
+            <img src="media/arrows.png" class="header-image">
+            <div class="header-text">SOURCE TO TARGET</div>
         </div>
 
         <p>Baking textures from source objects is not only supported but also has a few useful functions, including cage object generator, extrusion visualizer and more!</p>
         <p> You can choose between the default method of selecting the target and source objects in the viewport, or you can use Auto Bake's advanced method, with you can set up multiple target objects with their own source objects and settings each.</p>
         <p>This method will try to find the cage and all the source objects, based on the target object, settings them up automatically.</p>
 
-        <div class="media-row">
-            <div class="media-item">
-                <div class="rounded-media">
-                    <div class="zoom-container">
-                        <a href="https://imtsybe.github.io/media/extrusion_visualizer.mp4" target="_blank"><video src="media/extrusion_visualizer.mp4" class="rounded-media" autoplay loop muted></video></a>
-                    </div>
-                </div>
-                <div class="overlay">Extrusion Visalizer</div>
-            </div>
-
-            <div class="media-item">
-                <div class="rounded-media">
-                    <div class="zoom-container">
-                        <a href="https://imtsybe.github.io/media/cage_object.mp4" target="_blank"><video src="media/cage_object.mp4" class="rounded-media" autoplay loop muted></video></a>
-                    </div>
-                </div>
-                <div class="overlay">Cage Object Generation</div>
-            </div>
-        </div>
-
     </div>
 
     <div>
         <hr class="line-below">
-        <div class="rounded-box"></div>
+        <div class="header-top"></div>
         
-        <div class="image-container">
-            <img src="media/arrows.png" alt="" class="image-below">
-            <div class="overlay-text">UDIM</div>
+        <div class="header">
+            <img src="media/arrows.png" alt="" class="header-image">
+            <div class="header-text">UDIM</div>
         </div>
 
         <p>Text</p>
@@ -254,11 +213,11 @@ You can bake from source to target by the default way of selecting the source an
 
     <div>
         <hr class="line-below">
-        <div class="rounded-box"></div>
+        <div class="header-top"></div>
         
-        <div class="image-container">
-            <img src="media/arrows.png" alt="" class="image-below">
-            <div class="overlay-text">UV TOOLS</div>
+        <div class="header">
+            <img src="media/arrows.png" alt="" class="header-image">
+            <div class="header-text">UV TOOLS</div>
         </div>
 
         <p>Text</p>
@@ -266,11 +225,11 @@ You can bake from source to target by the default way of selecting the source an
 
     <div>
         <hr class="line-below">
-        <div class="rounded-box"></div>
+        <div class="header-top"></div>
         
-        <div class="image-container">
-            <img src="media/arrows.png" alt="" class="image-below">
-            <div class="overlay-text">TEXTURE TOOLS</div>
+        <div class="header">
+            <img src="media/arrows.png" alt="" class="header-image">
+            <div class="header-text">TEXTURE TOOLS</div>
         </div>
 
         <p>Text</p>
@@ -278,11 +237,11 @@ You can bake from source to target by the default way of selecting the source an
 
     <div>
         <hr class="line-below">
-        <div class="rounded-box"></div>
+        <div class="header-top"></div>
         
-        <div class="image-container">
-            <img src="media/arrows.png" alt="" class="image-below">
-            <div class="overlay-text">SUPPORT</div>
+        <div class="header">
+            <img src="media/arrows.png" alt="" class="header-image">
+            <div class="header-text">SUPPORT</div>
         </div>
 
         <p>Text</p>
@@ -290,11 +249,11 @@ You can bake from source to target by the default way of selecting the source an
 
     <div>
         <hr class="line-below">
-        <div class="rounded-box"></div>
+        <div class="header-top"></div>
         
-        <div class="image-container">
-            <img src="media/arrows.png" alt="" class="image-below">
-            <div class="overlay-text">REVIEWS</div>
+        <div class="header">
+            <img src="media/arrows.png" alt="" class="header-image">
+            <div class="header-text">REVIEWS</div>
         </div>
 
         <p>Text</p>
@@ -302,11 +261,11 @@ You can bake from source to target by the default way of selecting the source an
 
     <div>
         <hr class="line-below">
-        <div class="rounded-box"></div>
+        <div class="header-top"></div>
         
-        <div class="image-container">
-            <img src="media/arrows.png" alt="" class="image-below">
-            <div class="overlay-text">AFFILIATE</div>
+        <div class="header">
+            <img src="media/arrows.png" alt="" class="header-image">
+            <div class="header-text">AFFILIATE</div>
         </div>
 
         <p>Text</p>
