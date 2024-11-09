@@ -86,12 +86,12 @@ p {
     gap: 5px;
     max-width: 100%;
     justify-content: center;
+    margin: 0px 0px 10px 0px;
 }
 
 .container {
-
-    margin: 0px 0px 10px 0px;
     border: 2px solid #fa912bc7;
+    background-color: #fa912bc7;
     border-radius: 8px;
     overflow: hidden;
     position: relative;

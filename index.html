@@ -61,18 +61,14 @@
         
         <p>A wide variety of textures can be baked with Auto Bake, including <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/bake-list/list-items#shader" target="_blank" class="text-link">shader sockets</a>, <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/bake-list/list-items#multiresolution" target="_blank" class="text-link">multiresolution modifier data</a>, <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/bake-list/list-items#standard" target="_blank" class="text-link">Blender's default bake passes</a>, and a set of <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/bake-list/list-items#miscellaneous" target="_blank" class="text-link">miscellaneous</a> bake types for channel packing textures, baking pointiness map of the object, or baking bevel normal, and more!</p>
         
-        <div class="media-row">
-            <div class="container" style="margin: 0px 0px 5px 0px">
+        <div class="media-row" style="margin-bottom: 5px;">
+            <div class="container">
                 <a href="https://imtsybe.github.io/media/bake_types.png" target="_blank"><img src="media/bake_types.png" class="media"></a>
                 <div class="media-overlay" style="font-size: 30px;">All Bakeable Texture Maps</div>
             </div>
         </div> 
 
-        <div class="media-row">
-            <div class="container">
-                <a href="https://imtsybe.github.io/media/render_properties_focus.png" target="_blank"><img src="media/render_properties_focus.png" class="media"></a>
-                <div class="media-overlay" style="font-size: 25px;">Channel Packing</div>
-            </div>
+        <div class="media-row" style="margin-bottom: 5px;">
             <div class="container" >
                 <a href="https://imtsybe.github.io/media/3d_viewport_focus.png" target="_blank"><img src="media/3d_viewport_focus.png" class="media"></a>
                 <div class="media-overlay" style="font-size: 25px;">Pointiness</div>
@@ -81,16 +77,16 @@
                 <a href="https://imtsybe.github.io/media/shader_editor_focus.png" target="_blank"><img src="media/shader_editor_focus.png" class="media"></a>
                 <div class="media-overlay" style="font-size: 25px;">Ambient Occlusion</div>
             </div>
-        </div> 
+        <!-- </div>  -->
 
-        <div class="media-row">
+        <!-- <div class="media-row"> -->
             <div class="container">
                 <a href="https://imtsybe.github.io/media/shader_editor_focus.png" target="_blank"><img src="media/shader_editor_focus.png" class="media"></a>
                 <div class="media-overlay" style="font-size: 25px;">Bevel</div>
             </div>
             <div class="container">
                 <a href="https://imtsybe.github.io/media/shader_editor_focus.png" target="_blank"><img src="media/shader_editor_focus.png" class="media"></a>
-                <div class="media-overlay" style="font-size: 25px;">Multiresoltion</div>
+                <div class="media-overlay" style="font-size: 25px;">Edge</div>
             </div>
             <div class="container">
                 <a href="https://imtsybe.github.io/media/shader_editor_focus.png" target="_blank"><img src="media/shader_editor_focus.png" class="media"></a>
@@ -165,7 +161,7 @@
             </div>
         </div> 
 
-        <p>With another option enabled, Auto Bake will not only set up the materials and textures, but it will also create a <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/object/final" target="_blank" class="text-link">baked version</a> of the object(s), applying the <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/material/final" target="_blank" class="text-link">final material</a>, and then the original object can be replaced with the baked object using the <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/bake-and-export/queue#confirm" target="_blank" class="text-link">confirm button</a>.</p>
+        <p>With another option enabled, Auto Bake will not only set up the materials and textures, but it will also create a <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/object/final" target="_blank" class="text-link">baked version</a> of all the baked objects, applying their own <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/material/final" target="_blank" class="text-link">final materials</a>. Additionally, then the original object can be completely replaced with the baked object using the <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/bake-and-export/queue#confirm" target="_blank" class="text-link">confirm button</a>.</p>
 
     </div>
 
@@ -297,7 +293,7 @@ You can bake from source to target by the default way of selecting the source an
         <p>Atlas Bake</p>
         <p>Default Texture (Color, Alpha)</p>
         <p>Color Space</p>
-        <p>Sampling</p>
+        <p>Sampling (-> maybe to its own category to bake tools if has any other tool to put there)</p>
         <p>Texture Packing & Fake User</p>
         <p>Anti Aliasing (Scaled)</p>
     </div>
