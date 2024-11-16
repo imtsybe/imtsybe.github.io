@@ -19,7 +19,7 @@ hr.line-below {
     color: #c28500ba;
 }
 
-p {
+p, ul{
     font-family: Poppins, sans-serif;
     font-size: 13px;
     color: #c28500ba;
@@ -27,6 +27,8 @@ p {
     text-align: justify;
     width: 100%;
     font-weight: bold;
+    list-style-position: inside;
+    padding-left: 0;
 }
 
 .intro-box {
