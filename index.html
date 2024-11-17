@@ -336,7 +336,7 @@ You can bake from source to target by the default way of selecting the source an
 
         <p>Auto Bake offers a full UDIM texture support with a dedicated UDIM. In the UDIM mode there is also a UDIM Tiles list which holds the tiles and their scales. The tiles can either be set one by one or imported from an existing UDIM texture.</p>
         
-        <div class="media-row" style="align-items: stretch;">
+        <div class="media-row">
             
             <div class="container" style="flex: 1;">
                 <a href="https://imtsybe.github.io/media/udim_list.gif" target="_blank"><img src="media/udim_list.gif" class="media"></a>
@@ -349,7 +349,7 @@ You can bake from source to target by the default way of selecting the source an
             </div>
             
         </div> 
-        
+
         <p>For the UDIM tiles labels can be enabled, that then can be freely edited, and when baking the textures, these labels will be assigned to the UDIM tiles of the baked textures.</p>
         
     </div>
@@ -363,20 +363,24 @@ You can bake from source to target by the default way of selecting the source an
             <div class="header-text">UV TOOLS</div>
         </div>
 
-        <p>
-            Auto Bake is suited with useful UV tools, which one of them allows to bake to a different UV map.
-            Baking to a different UV map opens the possibility to use another or multiple UV maps for the materials, or to rebake textures from one UV to another.
-            The target UV map can either be the default that is used for rendering, the active UV map, or one specified by a set name.
-        </p>
-
-
-        <p>
-            Auto Bake can also generate UV maps using Blender's Smart UV Project. A new UV map is generated when the set target UV is not found, or if the object has no UV map at all.
-        </p>
-
+        <p>Auto Bake is suited with useful UV tools, which one of them allows to bake to a different UV map. Baking to a different UV map opens the possibility to use another or multiple UV maps for the materials, or to rebake textures from one UV to another. The target UV map can either be the default that is used for rendering, the active UV map, or one specified by a set name.</p>
+        <p>Auto Bake can also generate UV maps using Blender's Smart UV Project. A new UV map is generated when the set target UV is not found, or if the object has no UV map at all.</p>
         
-        <p style="color: black;">{image of target uv} {image of smart uv project settings}</p>
+        <div class="media-row">
+            
+            <div class="container" style="flex: 1;">
+                <a href="https://imtsybe.github.io/media/uv_target.png" target="_blank"><img src="media/uv_target.png" class="media" style="height: 100%; object-fit: cover;"></a>
+                <div class="media-overlay"></div>
+            </div>
+            
+            <div class="container" style="flex: 1;">
+                <a href="https://imtsybe.github.io/media/smart_uv.png" target="_blank"><img src="media/smart_uv.png" class="media"></a>
+                <div class="media-overlay" style="font-size: 30px;"></div>
+            </div>
+            
+        </div> 
         
+        <p>The unused UV maps can also be removed from the object after the bake, only keeping the one the textures was baked to.</p>
 
     </div>
 
@@ -413,7 +417,7 @@ You can bake from source to target by the default way of selecting the source an
         
         <p style="color: black;">{}</p>
 
-        <p>Default Texture (Color, Alpha)</p>
+        <p>The default color of the textures can also be edited to any custom color, or also the alpha channel generation can also be enabled. These parts are only visible on the textures where nothing is baked, but can be used with low margin for chroma keying or other.</p>
 
     </div>
 
