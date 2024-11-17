@@ -67,36 +67,71 @@
             </div>
         </div> 
 
-        <div class="media-row" style="margin-bottom: 5px;">
-            <div class="container" >
-                <a href="https://imtsybe.github.io/media/3d_viewport_focus.png" target="_blank"><img src="media/3d_viewport_focus.png" class="media"></a>
-                <div class="media-overlay" style="font-size: 25px;">Pointiness</div>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <img src="https://imtsybe.github.io/media/shader_editor_focus.png" class="media">
+              <div class="text">Bevel</div>
             </div>
-            <div class="container">
-                <a href="https://imtsybe.github.io/media/shader_editor_focus.png" target="_blank"><img src="media/shader_editor_focus.png" class="media"></a>
-                <div class="media-overlay" style="font-size: 25px;">Ambient Occlusion</div>
+            
+            <div class="mySlides fade">
+              <img src="https://imtsybe.github.io/media/shader_editor_focus.png" class="media">
+              <div class="text">Gradient</div>
             </div>
-            <div class="container">
-                <a href="https://imtsybe.github.io/media/shader_editor_focus.png" target="_blank"><img src="media/shader_editor_focus.png" class="media"></a>
-                <div class="media-overlay" style="font-size: 25px;">Bevel</div>
+            
+            <div class="mySlides fade">
+              <img src="https://imtsybe.github.io/media/shader_editor_focus.png" class="media">
+              <div class="text">Edge</div>
             </div>
-            <div class="container">
-                <a href="https://imtsybe.github.io/media/shader_editor_focus.png" target="_blank"><img src="media/shader_editor_focus.png" class="media"></a>
-                <div class="media-overlay" style="font-size: 25px;">Edge</div>
+            
+            <div class="mySlides fade">
+              <img src="https://imtsybe.github.io/media/shader_editor_focus.png" class="media">
+              <div class="text">Ambient Occlusion</div>
             </div>
-            <div class="container">
-                <a href="https://imtsybe.github.io/media/shader_editor_focus.png" target="_blank"><img src="media/shader_editor_focus.png" class="media"></a>
-                <div class="media-overlay" style="font-size: 25px;">Gradient</div>
+            
+            <div class="mySlides fade">
+              <img src="https://imtsybe.github.io/media/shader_editor_focus.png" class="media">
+              <div class="text">Pointiness</div>
             </div>
-            <div class="container">
-                <a href="https://imtsybe.github.io/media/shader_editor_focus.png" target="_blank"><img src="media/shader_editor_focus.png" class="media"></a>
-                <div class="media-overlay" style="font-size: 25px;">ID</div>
-            </div>
-        </div> 
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+        </div>
+            
+        <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+        }
+        </script>
+        
     </div> 
 
     <div>
-        <hr class="line-below">
+        <hr class="line-below" style="margin-top: 10px;">
         <div class="header-top"></div>
         
         <div class="header">
@@ -345,7 +380,7 @@ You can bake from source to target by the default way of selecting the source an
             
             <div class="container" style="flex: 1;">
                 <a href="https://imtsybe.github.io/media/udim_label.mp4" target="_blank"><video src="media/udim_label.mp4" autoplay loop muted class="media"></video></a>
-                <div class="media-overlay" style="font-size: 30px;">UDIM Labels</div>
+                <div class="media-overlay">UDIM Labels</div>
             </div>
             
         </div> 
@@ -375,7 +410,7 @@ You can bake from source to target by the default way of selecting the source an
             
             <div class="container" style="flex: 1;">
                 <a href="https://imtsybe.github.io/media/smart_uv.png" target="_blank"><img src="media/smart_uv.png" class="media"></a>
-                <div class="media-overlay" style="font-size: 30px;"></div>
+                <div class="media-overlay"></div>
             </div>
             
         </div> 
@@ -393,30 +428,37 @@ You can bake from source to target by the default way of selecting the source an
             <div class="header-text">TEXTURE TOOLS</div>
         </div>
 
-        <p>Auto Bake offers tools to help you handling all sort of texture processes before and after the bakes are done. One of this process is the channel packing, which allows to combine black-and-white textures (like the Roughness, Metallic, or Alpha) into a single RGB texture. You can customize what texture to pack on each channel or what channel to leave empty.</p>
+        <p>Channel packing allows to bake up to three white-and-black textures (like the Roughness, Metallic, or Alpha) as a single RGB, combining them into one texture instead of three separate. You can customize what texture map to have on which RGB channel, or which to left empty.</p>
 
         <p style="color: black;">{img of how channel packing works} {img of how the channels can be selected}</p>
         
-        <p>Another useful tool is the texture sharing/atlas bake, where you can bake multiple objects onto the same textures. With a simple option enabled, all the selected objects will be baked onto shared textures.</p>
-        
-        <p style="color: black;">{video/image of chaning the color space or mabye nothing}</p>
-        
-        <p>The quality of the textures depend a lot on the used sampling settings when baking, but not for all the textures. Some texture maps do not require high settings at all, and only the bare minimum without any loss of quality. For this reason Auto Bake uses a split render sampling method, where two different render settings are used, one for the textures that not sample dependent, and the other that is. Of course this can also be disabled an a single setting can be used for all.</p>
+        <p>Texture sharing / atlas bake is another useful feature of Auto Bake, which allows to bake multiple objects onto the same textures, just by enabling a single option.</p>
         
         <p style="color: black;">{mp4 of the bake process where on the left the objects are selected and on the right the base color is baked from one object then the next and the next}</p>
         
-        <p>Different texture maps need to be used in different color-spaces, which by default should be changed one by one but Auto Bake will automatically set the correct one by default. Of course when you want to use a different color-space for a texture type, it can be changed with a single option.</p>
+        <p>The quality of the textures depend a lot on the used sampling settings when baking, but not for all the textures. Some texture maps do not require high settings at all, and only the bare minimum without any loss of quality. For this reason Auto Bake uses a split render sampling method, where two different render settings are used, one for the textures that not sample dependent, and the other that is. Of course this can also be disabled an a single setting can be used for all.</p>
         
-        <p style="color: black;">{img of low sampling settings} {img of high sampling settings}</p>
+
+        <div class="media-row">
+            
+            <div class="container" style="flex: 1;">
+                <a href="https://imtsybe.github.io/media/sampling_low.png" target="_blank"><img src="media/sampling_low.png" class="media"></a>
+                <div class="media-overlay">Sampling Low</div>
+            </div>
+            
+            <div class="container" style="flex: 1;">
+                <a href="https://imtsybe.github.io/media/sampling_high.png" target="_blank"><img src="media/sampling_high.png" class="media"></a>
+                <div class="media-overlay">Sampling High</div>
+            </div>
+            
+        </div> 
+        
+        <p>Different texture maps need to be used in different color-spaces, which by default should be changed one by one but Auto Bake will automatically set the correct one by default. Of course when you want to use a different color-space for a texture type, it can be changed with a single option.</p>
         
         <p>Keeping the textures and preventing them from being lost can be done by either exporting them or the other method is packing them into the .blend file itself. The options are granted for both, or you can also assign a fake user automatically to the fake user.</p>
         
-        <p style="color: black;">{}</p>
-
         <p>Anti-aliasing can be enabled to apply to the baked textures. You can choose between to option methods, the upscaled where the texture is baked in a set higher resolution then scaled down, or the downscaled where the textures after the bake are scaled down and back up.</p>
         
-        <p style="color: black;">{}</p>
-
         <p>The default color of the textures can also be edited to any custom color, or also the alpha channel generation can also be enabled. These parts are only visible on the textures where nothing is baked, but can be used with low margin for chroma keying or other.</p>
 
     </div>

@@ -136,3 +136,62 @@ p, ul{
 .container:hover .media-overlay {
     opacity: 1;
 }
+
+
+
+
+/* Slideshow container */
+.slideshow-container {
+    border: 2px solid #fa912bc7;
+    background-color: #fa912bc7;
+    border-radius: 8px;
+    overflow: hidden;
+    object-fit: cover;
+    position: relative;
+    vertical-align: top;
+    max-width: 100%;
+    margin: auto;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 20px;
+    user-select: none;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
+  .prev:hover,
+  .next:hover {
+    background-color: #fa922b8e;
+  }
+  
+  .text {
+
+    
+    font-family: 'Passion One', cursive;
+    color: #f2f2f2;
+    font-size: 20px;
+    padding: 5px 20px 5px 20px;
+    position: absolute;
+    border-radius: 10px;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: #fa922b9c;
+    user-select: none;
+    display: inline-block;
+  }
