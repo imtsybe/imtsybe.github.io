@@ -10,6 +10,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body >
@@ -69,29 +71,29 @@
 
         <div class="slideshow-container">
 
-            <div class="mySlides fade">
+            <div class="map_slide">
               <img src="https://imtsybe.github.io/media/shader_editor_focus.png" class="media">
-              <div class="text">Bevel</div>
+              <div class="slideshow_title">Bevel</div>
             </div>
             
-            <div class="mySlides fade">
+            <div class="map_slide">
               <img src="https://imtsybe.github.io/media/shader_editor_focus.png" class="media">
-              <div class="text">Gradient</div>
+              <div class="slideshow_title">Gradient</div>
             </div>
             
-            <div class="mySlides fade">
+            <div class="map_slide">
               <img src="https://imtsybe.github.io/media/shader_editor_focus.png" class="media">
-              <div class="text">Edge</div>
+              <div class="slideshow_title">Edge</div>
             </div>
             
-            <div class="mySlides fade">
+            <div class="map_slide">
               <img src="https://imtsybe.github.io/media/shader_editor_focus.png" class="media">
-              <div class="text">Ambient Occlusion</div>
+              <div class="slideshow_title">Ambient Occlusion</div>
             </div>
             
-            <div class="mySlides fade">
+            <div class="map_slide">
               <img src="https://imtsybe.github.io/media/shader_editor_focus.png" class="media">
-              <div class="text">Pointiness</div>
+              <div class="slideshow_title">Curvature</div>
             </div>
             
             <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -113,7 +115,7 @@
         
         function showSlides(n) {
             let i;
-            let slides = document.getElementsByClassName("mySlides");
+            let slides = document.getElementsByClassName("map_slide");
             let dots = document.getElementsByClassName("dot");
             if (n > slides.length) {slideIndex = 1}    
             if (n < 1) {slideIndex = slides.length}
@@ -127,7 +129,7 @@
             dots[slideIndex-1].className += " active";
         }
         </script>
-        
+
     </div> 
 
     <div>
