@@ -229,7 +229,7 @@
         <div class="media-row">
             <div class="container">
                 <a href="https://imtsybe.github.io/media/export.mp4" target="_blank"><video src="media/export.mp4" class="media" autoplay loop muted></video></a>
-                <div class="media-overlay">Export Process</div>
+                <div class="media-overlay">Texture & Object Export</div>
             </div>
         </div> 
         
@@ -262,6 +262,30 @@
                 <div class="media-overlay" style="font-size: 25px;">Shader Editor</div>
             </div>
         </div> 
+        
+    </div>
+
+    <div>
+        <hr class="line-below">
+        <div class="header-top"></div>
+        
+        <div class="header">
+            <img src="media/arrows.png" alt="" class="header-image">
+            <div class="header-text">PRESETS</div>
+        </div>
+
+        <p>Auto Bake allows you save and load presets freely for all parts of the add-on. These presets are shared across all your .blend files so they can be accessed easily. You can also customize which options to save and which not.</p>
+        
+        <div class="media-row">
+            <div class="container">
+                <a href="https://imtsybe.github.io/media/preset_add.mp4" target="_blank"><video src="media/preset_add.mp4" class="media" autoplay loop muted></video></a>
+                <div class="media-overlay" style="font-size: 30px;">Saving Preset</div>
+            </div>
+            <div class="container">
+                <a href="https://imtsybe.github.io/media/preset_select.mp4" target="_blank"><video src="media/preset_select.mp4" class="media" autoplay loop muted></video></a>
+                <div class="media-overlay" style="font-size: 30px;">Loading Presets</div>
+            </div>
+        </div> 
 
     </div>
     
@@ -282,6 +306,8 @@ You can bake from source to target by the default way of selecting the source an
         </div>
 
         <p>Auto Bake also has the option to match the location of the source objects to the target object's location, which makes the object selection mode a lot easier.</p>
+        
+                <p style="color:black">{standard metho} {advanced method}</p>
         <p>Baking textures from source objects is not only supported but also has a few useful functions, including cage object generator, extrusion visualizer and more!</p>
         <p> You can choose between the default method of selecting the target and source objects in the viewport, or you can use Auto Bake's advanced method, with you can set up multiple target objects with their own source objects and settings each.</p>
         <p>This method will try to find the cage and all the source objects, based on the target object's name, settings them up automatically.</p>
@@ -308,7 +334,24 @@ You can bake from source to target by the default way of selecting the source an
             <div class="header-text">UDIM</div>
         </div>
 
-        <p>Dedicated UDIM Support</p>
+        <p>Auto Bake offers a full UDIM texture support with a dedicated UDIM. In the UDIM mode there is also a UDIM Tiles list which holds the tiles and their scales. The tiles can either be set one by one or imported from an existing UDIM texture.</p>
+        
+        <div class="media-row" style="align-items: stretch;">
+            
+            <div class="container" style="flex: 1;">
+                <a href="https://imtsybe.github.io/media/udim_list.gif" target="_blank"><img src="media/udim_list.gif" class="media"></a>
+                <div class="media-overlay">UDIM List</div>
+            </div>
+            
+            <div class="container" style="flex: 1;">
+                <a href="https://imtsybe.github.io/media/udim_label.mp4" target="_blank"><video src="media/udim_label.mp4" autoplay loop muted class="media"></video></a>
+                <div class="media-overlay" style="font-size: 30px;">UDIM Labels</div>
+            </div>
+            
+        </div> 
+        
+        <p>For the UDIM tiles labels can be enabled, that then can be freely edited, and when baking the textures, these labels will be assigned to the UDIM tiles of the baked textures.</p>
+        
     </div>
 
     <div>
@@ -320,9 +363,21 @@ You can bake from source to target by the default way of selecting the source an
             <div class="header-text">UV TOOLS</div>
         </div>
 
-        <p>Smart UV Project</p>
-        <p>Selecting Target UV</p>
-        <p>Retarget textures to a new UV</p>
+        <p>
+            Auto Bake is suited with useful UV tools, which one of them allows to bake to a different UV map.
+            Baking to a different UV map opens the possibility to use another or multiple UV maps for the materials, or to rebake textures from one UV to another.
+            The target UV map can either be the default that is used for rendering, the active UV map, or one specified by a set name.
+        </p>
+
+
+        <p>
+            Auto Bake can also generate UV maps using Blender's Smart UV Project. A new UV map is generated when the set target UV is not found, or if the object has no UV map at all.
+        </p>
+
+        
+        <p style="color: black;">{image of target uv} {image of smart uv project settings}</p>
+        
+
     </div>
 
     <div>
@@ -334,13 +389,32 @@ You can bake from source to target by the default way of selecting the source an
             <div class="header-text">TEXTURE TOOLS</div>
         </div>
 
-        <p>Atlas Bake</p>
+        <p>Auto Bake offers tools to help you handling all sort of texture processes before and after the bakes are done. One of this process is the channel packing, which allows to combine black-and-white textures (like the Roughness, Metallic, or Alpha) into a single RGB texture. You can customize what texture to pack on each channel or what channel to leave empty.</p>
+
+        <p style="color: black;">{img of how channel packing works} {img of how the channels can be selected}</p>
+        
+        <p>Another useful tool is the texture sharing/atlas bake, where you can bake multiple objects onto the same textures. With a simple option enabled, all the selected objects will be baked onto shared textures.</p>
+        
+        <p style="color: black;">{video/image of chaning the color space or mabye nothing}</p>
+        
+        <p>The quality of the textures depend a lot on the used sampling settings when baking, but not for all the textures. Some texture maps do not require high settings at all, and only the bare minimum without any loss of quality. For this reason Auto Bake uses a split render sampling method, where two different render settings are used, one for the textures that not sample dependent, and the other that is. Of course this can also be disabled an a single setting can be used for all.</p>
+        
+        <p style="color: black;">{mp4 of the bake process where on the left the objects are selected and on the right the base color is baked from one object then the next and the next}</p>
+        
+        <p>Different texture maps need to be used in different color-spaces, which by default should be changed one by one but Auto Bake will automatically set the correct one by default. Of course when you want to use a different color-space for a texture type, it can be changed with a single option.</p>
+        
+        <p style="color: black;">{img of low sampling settings} {img of high sampling settings}</p>
+        
+        <p>Keeping the textures and preventing them from being lost can be done by either exporting them or the other method is packing them into the .blend file itself. The options are granted for both, or you can also assign a fake user automatically to the fake user.</p>
+        
+        <p style="color: black;">{}</p>
+
+        <p>Anti-aliasing can be enabled to apply to the baked textures. You can choose between to option methods, the upscaled where the texture is baked in a set higher resolution then scaled down, or the downscaled where the textures after the bake are scaled down and back up.</p>
+        
+        <p style="color: black;">{}</p>
+
         <p>Default Texture (Color, Alpha)</p>
-        <p>Color Space</p>
-        <p>Sampling (-> maybe to its own category to bake tools if has any other tool to put there)</p>
-        <p>Texture Packing & Fake User</p>
-        <p>Anti Aliasing (Scaled)</p>
-        <p>Channel Packing</p>
+
     </div>
 
     <div>
