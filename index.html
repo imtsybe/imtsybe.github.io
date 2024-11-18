@@ -18,7 +18,30 @@
 
     <div>
         <div class="intro-box">
-            <b>Auto Bake is a capable but very easy to use texture baker add-on with the goal to provide a fully automated, seamless workflow while ensuring simplicity and full control. It can also export textures, create a baked version of the objectss with automatic texture setup, export the baked objects, supports advanced materials, and a lot more!
+            <!-- <b>Auto Bake is a capable but very easy to use texture baker add-on with the goal to provide a fully automated, seamless workflow while ensuring simplicity and full control. It can also export textures, create a baked version of the objectss with automatic texture setup, export the baked objects, supports advanced materials, and a lot more! -->
+            <b>
+                bake
+                export textures and objects
+                preview
+                inspect
+                choose workspace
+                create presets
+                bake from source to target
+                generate cage object
+                visualize extrusion value
+
+                select target UV
+                create UVs
+                remove unused UVs
+                bake udim textures
+                channel pack textures
+                atlas Bake
+                auto set color color-space
+                auto adjust bake settings
+                apply anti Anti-aliasing
+
+
+                Auto Bake is a capable but very easy to use texture baker add-on with the goal to provide a fully automated, seamless workflow while ensuring simplicity and full control. It can also export textures, create a baked version of the objectss with automatic texture setup, export the baked objects, supports advanced materials, and a lot more!
             </b>
         </div>
         <hr class="line-below">
@@ -70,30 +93,75 @@
         </div> 
 
         <div class="slideshow-container">
+            
+            <div class="map_slide">
+                <img src="media/map/render.png" class="media">
+                <div class="slideshow_title">Render</div>
+            </div>
 
             <div class="map_slide">
-              <img src="https://imtsybe.github.io/media/shader_editor_focus.png" class="media">
-              <div class="slideshow_title">Bevel</div>
+                <img src="media/map/base.png" class="media">
+                <div class="slideshow_title">Base Color</div>
             </div>
-            
+
             <div class="map_slide">
-              <img src="https://imtsybe.github.io/media/shader_editor_focus.png" class="media">
-              <div class="slideshow_title">Gradient</div>
-            </div>
-            
-            <div class="map_slide">
-              <img src="https://imtsybe.github.io/media/shader_editor_focus.png" class="media">
-              <div class="slideshow_title">Edge</div>
-            </div>
-            
-            <div class="map_slide">
-              <img src="https://imtsybe.github.io/media/shader_editor_focus.png" class="media">
+              <img src="media/map/ambient.png" class="media">
               <div class="slideshow_title">Ambient Occlusion</div>
             </div>
-            
+
             <div class="map_slide">
-              <img src="https://imtsybe.github.io/media/shader_editor_focus.png" class="media">
-              <div class="slideshow_title">Curvature</div>
+                <img src="media/map/normal.png" class="media">
+                <div class="slideshow_title">Normal</div>
+            </div>
+
+            <div class="map_slide">
+                <img src="media/map/bevel.png" class="media">
+                <div class="slideshow_title">Bevel</div>
+            </div>
+
+            <div class="map_slide">
+                <img src="media/map/roughness.png" class="media">
+                <div class="slideshow_title">Roughness</div>
+            </div>
+
+            <div class="map_slide">
+                <img src="media/map/metallic.png" class="media">
+                <div class="slideshow_title">Metallic</div>
+            </div>
+
+            <div class="map_slide">
+                <img src="media/map/edge.png" class="media">
+                <div class="slideshow_title">Edge</div>
+            </div>
+
+            <div class="map_slide">
+                <img src="media/map/gradient.png" class="media">
+                <div class="slideshow_title">Gradient</div>
+            </div>
+
+            <div class="map_slide">
+                <img src="media/map/id_material.png" class="media">
+                <div class="slideshow_title">ID (Material)</div>
+            </div>
+
+            <div class="map_slide">
+                <img src="media/map/id_object.png" class="media">
+                <div class="slideshow_title">ID (Object)</div>
+            </div>
+
+            <div class="map_slide">
+                <img src="media/map/sheen_tint.png" class="media">
+                <div class="slideshow_title">Sheen Tint</div>
+            </div>
+
+            <div class="map_slide">
+                <img src="media/map/sheen_weight.png" class="media">
+                <div class="slideshow_title">Sheen Weight</div>
+            </div>
+
+            <div class="map_slide">
+                <img src="media/map/curvature.png" class="media">
+                <div class="slideshow_title">Curvature</div>
             </div>
             
             <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -186,6 +254,8 @@
                 <div class="media-overlay">Fully & Partially Supported Examples</div>
             </div>
         </div> 
+
+        <p style="color: black;">*Turn multiple materials into a single one</p>
             
     </div>
     
@@ -462,6 +532,9 @@ You can bake from source to target by the default way of selecting the source an
         <p>Anti-aliasing can be enabled to apply to the baked textures. You can choose between to option methods, the upscaled where the texture is baked in a set higher resolution then scaled down, or the downscaled where the textures after the bake are scaled down and back up.</p>
         
         <p>The default color of the textures can also be edited to any custom color, or also the alpha channel generation can also be enabled. These parts are only visible on the textures where nothing is baked, but can be used with low margin for chroma keying or other.</p>
+
+        <p>Editable Properties</p>
+        <p>Merge the color space and sampling</p>
 
     </div>
 
