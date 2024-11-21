@@ -194,3 +194,11 @@ p, ul{
 .next:hover {
     background-color: #fa8d2be8;
 }
+
+iframe { 
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 2px solid #fa912bc7;
+    border-radius: 8px;
+    box-sizing: border-box;
+}

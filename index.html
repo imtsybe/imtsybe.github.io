@@ -19,7 +19,7 @@
     <div>
         <div class="intro-box">
 
-            <p style="font-weight: bold; color: #ffffff; font-size: 15px; margin: 0px">Bake a wide range of texture maps, preview them before baking, inspect the baked textures, export the baked textures and objects, apply the baked textures, create a baked version of the objects and materials. Bake UDIM and atlas textures, apply anti-aliasing, channel pack the textures. Generate new UVs, choose a target UV, remove unused UV maps, bake from source to target objects, generate cage objects, visualize extrusion, create and use your custom presets, and choose your workspace.</p>
+            <p style="font-weight: bold; color: #ffffff; font-size: 15px; margin: 0px">Bake a wide range of texture maps, preview them before baking, inspect the baked textures, export the baked textures and objects, apply the baked textures to the objects, create a baked version of the objects and materials. Bake UDIM and atlas textures, apply anti-aliasing, channel pack the textures. Generate new UVs, choose a target UV, remove unused UV maps, bake from source to target objects, generate cage objects, visualize extrusion, create and use your custom presets, and choose your workspace.</p>
         </div>
 
         <hr class="line-below">
@@ -376,14 +376,7 @@
         </div> 
 
     </div>
-    
-<!-- You can select between two methods for baking with source to target, either the standard, or the advanced method. The standard method is the default viewport object selection, while with the advanced method you can set up multiple target objects in a list with their source objects and settings each. -->
-<!-- You have the option to use the default method of selecting the source and target objects in the viewport,
-or by using the advanced method where you can set up a list of target objects with custom
-It can bake either by using the default method of selecting the objects in the viewport, or by using Auto Bake's advanced method. This method 
-object selection is not only supported but it has many smart functions. Other than the default method, 
-You can bake from source to target by the default way of selecting the source and target objects in the viewport and hittin the bake button or with the advanced method. -->
-<!-- move down the extrusion and cage object parts they are only secondary information -->
+
     <div>
         <hr class="line-below">
         <div class="header-top"></div>
@@ -393,23 +386,26 @@ You can bake from source to target by the default way of selecting the source an
             <div class="header-text">SOURCE TO TARGET</div>
         </div>
 
-        <p>Auto Bake also has the option to match the location of the source objects to the target object's location, which makes the object selection mode a lot easier.</p>
+        <p>Use either the defualt method of selecting the target and its source objects in the viewport, or use advanced method of constructing a list of target objects with their own source objects, extrusion, etc.</p>
         
-                <p style="color:black">{standard metho} {advanced method}</p>
-        <p>Baking textures from source objects is not only supported but also has a few useful functions, including cage object generator, extrusion visualizer and more!</p>
-        <p> You can choose between the default method of selecting the target and source objects in the viewport, or you can use Auto Bake's advanced method, with you can set up multiple target objects with their own source objects and settings each.</p>
-        <p>This method will try to find the cage and all the source objects, based on the target object's name, settings them up automatically.</p>
+        <p style="color:black">{viewport object selection} {list select target}</p>
+
+        <p>Bake textures from source to target objects, with the help of many smart tools. Set the cage and source objects automatically based on the target object's name, generate cage objects, or visualize the set extrusion value.</p>
 
         <div class="media-row">
-            <div class="container">
-                <a href="https://imtsybe.github.io/media/extrusion_visualizer.mp4" target="_blank"><video src="media/extrusion_visualizer.mp4" class="media" autoplay loop muted></video></a>
-                <div class="media-overlay" style="font-size: 30px;">Extrusion Visualizer</div>
-            </div>
             <div class="container">
                 <a href="https://imtsybe.github.io/media/cage_object.mp4" target="_blank"><video src="media/cage_object.mp4" class="media" autoplay loop muted></video></a>
                 <div class="media-overlay" style="font-size: 30px;">Cage Object Generation</div>
             </div>
+            <div class="container">
+                <a href="https://imtsybe.github.io/media/extrusion_visualizer.mp4" target="_blank"><video src="media/extrusion_visualizer.mp4" class="media" autoplay loop muted></video></a>
+                <div class="media-overlay" style="font-size: 30px;">Extrusion Visualizer</div>
+            </div>
         </div> 
+        
+        <p>Enable the location copy option to snap the source objects to the target object's location during the bake, which makes it easy to select the objects since they don't need to be overlapped.</p>
+        
+        <p style="color:black">{object location copy example}</p>
 
     </div>
 
@@ -422,23 +418,18 @@ You can bake from source to target by the default way of selecting the source an
             <div class="header-text">UDIM</div>
         </div>
 
-        <p>Auto Bake offers a full UDIM texture support with a dedicated UDIM. In the UDIM mode there is also a UDIM Tiles list which holds the tiles and their scales. The tiles can either be set one by one or imported from an existing UDIM texture.</p>
-        
+        <p>Bake UDIM textures in a fully supported environment. Set up or import the UDIM tile list from an existing UDIM image. Customize the tile number and the tile's scale. Enable and edit the labels for the UDIM tiles, which then will be assigned for the UDIM tiles of the textures.</p>
+
         <div class="media-row">
-            
             <div class="container" style="flex: 1;">
                 <a href="https://imtsybe.github.io/media/udim_list.gif" target="_blank"><img src="media/udim_list.gif" class="media"></a>
                 <div class="media-overlay">UDIM List</div>
             </div>
-            
             <div class="container" style="flex: 1;">
                 <a href="https://imtsybe.github.io/media/udim_label.mp4" target="_blank"><video src="media/udim_label.mp4" autoplay loop muted class="media"></video></a>
-                <div class="media-overlay">UDIM Labels</div>
+                <div class="media-overlay">Tile Labels</div>
             </div>
-            
         </div> 
-
-        <p>For the UDIM tiles labels can be enabled, that then can be freely edited, and when baking the textures, these labels will be assigned to the UDIM tiles of the baked textures.</p>
         
     </div>
 
@@ -451,14 +442,13 @@ You can bake from source to target by the default way of selecting the source an
             <div class="header-text">UV TOOLS</div>
         </div>
 
-        <p>Auto Bake is suited with useful UV tools, which one of them allows to bake to a different UV map. Baking to a different UV map opens the possibility to use another or multiple UV maps for the materials, or to rebake textures from one UV to another. The target UV map can either be the default that is used for rendering, the active UV map, or one specified by a set name.</p>
-        <p>Auto Bake can also generate UV maps using Blender's Smart UV Project. A new UV map is generated when the set target UV is not found, or if the object has no UV map at all.</p>
-        
+        <p>Set any of the UV maps of the object to be the target UV and to bake the textures to. It opens the possbility to use different UV maps in the shaders, or to rebake textures from one UV to another.</p>
+
         <div class="media-row">
             
             <div class="container" style="flex: 1;">
                 <a href="https://imtsybe.github.io/media/uv_target.png" target="_blank"><img src="media/uv_target.png" class="media" style="height: 100%; object-fit: cover;"></a>
-                <div class="media-overlay">Target UV</div>
+                <div class="media-overlay">UV Maps</div>
             </div>
             
             <div class="container" style="flex: 1;">
@@ -468,7 +458,7 @@ You can bake from source to target by the default way of selecting the source an
             
         </div> 
         
-        <p>The unused UV maps can also be removed from the object after the bake, only keeping the one the textures was baked to.</p>
+        <p>The unused UV maps can also set to be removed from the final objects, only keeping the one the textures were baked to. Objects without a UV map are will have one generated via Blender's Smart UV Project.</p>
 
     </div>
 
@@ -481,6 +471,31 @@ You can bake from source to target by the default way of selecting the source an
             <div class="header-text">TEXTURE TOOLS</div>
         </div>
 
+
+
+        <p>One of the most essential part of the textures, is how they are named. </p>
+
+
+
+        <div class="media-row">
+            
+            <div class="container" style="flex: 1;">
+                <a href="https://imtsybe.github.io/media/sampling_low.png" target="_blank"><img src="media/image_name.png" class="media"></a>
+                <div class="media-overlay"></div>
+            </div>
+            
+            <!-- <div class="container" style="flex: 1.5;">
+                <a href="https://imtsybe.github.io/media/sampling_low.png" target="_blank"><img src="media/name_focus.gif" class="media" style="height: 100%; object-fit: cover;"></a>
+                <div class="media-overlay"></div>
+            </div> -->
+
+            <div class="container" style="flex: 1;">
+                <a href="https://imtsybe.github.io/media/sampling_high.png" target="_blank"><img src="media/name_structure_editor.png" class="media"></a>
+                <div class="media-overlay"></div>
+            </div>
+            
+        </div> 
+
         <p>Channel packing allows to bake up to three white-and-black textures (like the Roughness, Metallic, or Alpha) as a single RGB, combining them into one texture instead of three separate. You can customize what texture map to have on which RGB channel, or which to left empty.</p>
 
         <p style="color: black;">{img of how channel packing works} {img of how the channels can be selected}</p>
@@ -489,9 +504,10 @@ You can bake from source to target by the default way of selecting the source an
         
         <p style="color: black;">{mp4 of the bake process where on the left the objects are selected and on the right the base color is baked from one object then the next and the next}</p>
         
+        <p>Different texture maps need to be used in different color-spaces, which by default should be changed one by one but Auto Bake will automatically set the correct one by default. Of course when you want to use a different color-space for a texture type, it can be changed with a single option.</p>
+
         <p>The quality of the textures depend a lot on the used sampling settings when baking, but not for all the textures. Some texture maps do not require high settings at all, and only the bare minimum without any loss of quality. For this reason Auto Bake uses a split render sampling method, where two different render settings are used, one for the textures that not sample dependent, and the other that is. Of course this can also be disabled an a single setting can be used for all.</p>
         
-
         <div class="media-row">
             
             <div class="container" style="flex: 1;">
@@ -506,16 +522,12 @@ You can bake from source to target by the default way of selecting the source an
             
         </div> 
         
-        <p>Different texture maps need to be used in different color-spaces, which by default should be changed one by one but Auto Bake will automatically set the correct one by default. Of course when you want to use a different color-space for a texture type, it can be changed with a single option.</p>
         
         <p>Keeping the textures and preventing them from being lost can be done by either exporting them or the other method is packing them into the .blend file itself. The options are granted for both, or you can also assign a fake user automatically to the fake user.</p>
         
         <p>Anti-aliasing can be enabled to apply to the baked textures. You can choose between to option methods, the upscaled where the texture is baked in a set higher resolution then scaled down, or the downscaled where the textures after the bake are scaled down and back up.</p>
         
         <p>The default color of the textures can also be edited to any custom color, or also the alpha channel generation can also be enabled. These parts are only visible on the textures where nothing is baked, but can be used with low margin for chroma keying or other.</p>
-
-        <p>Editable Properties</p>
-        <p>Merge the color space and sampling</p>
 
     </div>
 
@@ -567,23 +579,22 @@ You can bake from source to target by the default way of selecting the source an
 
     </div>
 
-
     <div>
-        <hr class="line-below">
+        <!-- <hr class="line-below">
         <div class="header-top"></div>
         
         <div class="header">
             <img src="media/arrows.png" alt="" class="header-image">
-            <div class="header-text">Tutorials</div>
+            <div class="header-text">TUTORIAL</div>
         </div>
 
-        <p>Check out the video of Ryan covering Auto Bake </p>
+        <p>Check out the video from Ryan where he covers the basics of Auto Bake and will help you get started on how it works and how to use it!</p>
 
-
+        <iframe id="ytplayer" type="text/html" src="https://www.youtube.com/embed/mJ4BCcVjHHg?modestbranding=1" frameborder="0" allowfullscreen></iframe> -->
     </div>
 
-
     <div>
+        <!-- <hr class="line-below" style="margin-top: 5px;"> -->
         <hr class="line-below">
         <div class="header-top"></div>
         
@@ -602,9 +613,8 @@ You can bake from source to target by the default way of selecting the source an
 
         <p>Creators are also provided with a set of promotional materials, including videos and images, which can be freely used in videos, blogs, or posts about Auto Bake. The kit can be downloaded as a zip file here!</p>
 
+        <hr class="line-below">
     </div>
 
-    <hr class="line-below">
-    
 </body>
 </html>
