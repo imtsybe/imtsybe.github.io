@@ -19,7 +19,7 @@
     <div>
         <div class="intro-box">
 
-            <p style="font-weight: bold; color: #ffffff; font-size: 15px; margin: 0px">Bake a wide range of texture maps, preview them before baking, inspect the baked textures, export the baked textures and objects, apply the baked textures to the objects, create a baked version of the objects and materials. Bake UDIM and atlas textures, apply anti-aliasing, channel pack the textures. Generate new UVs, choose a target UV, remove unused UV maps, bake from source to target objects, generate cage objects, visualize extrusion, create and use your custom presets, and choose your workspace.</p>
+            <p style="font-weight: bold; color: #ffffff; font-size: 15px; margin: 0px; line-height: 1.3">Bake a wide range of texture maps, preview them before baking, inspect the baked textures, export the baked textures and objects, apply the baked textures to the objects, create a baked version of the objects and materials. Bake UDIM and atlas textures, apply anti-aliasing, channel pack the textures. Generate new UVs, choose a target UV, remove unused UV maps, bake from source to target objects, generate cage objects, visualize extrusion, create and use your custom presets, and choose your workspace.</p>
         </div>
 
         <hr class="line-below">
@@ -404,8 +404,6 @@
         </div> 
         
         <p>Enable the location copy option to snap the source objects to the target object's location during the bake, which makes it easy to select the objects since they don't need to be overlapped.</p>
-        
-        <p style="color:black">{object location copy example}</p>
 
     </div>
 
@@ -472,37 +470,20 @@
         </div>
 
 
+        <p>Atlas textures is a tool to bake multiple object's onto the same, shared textures.</p>
+        
+        <p style="color: black;">{mp4 of the bake process where on the left the objects are selected and on the right the base color is baked from one object then the next and the next}</p>
 
-        <p>One of the most essential part of the textures, is how they are named. </p>
 
 
 
-        <div class="media-row">
             
-            <div class="container" style="flex: 1;">
-                <a href="https://imtsybe.github.io/media/sampling_low.png" target="_blank"><img src="media/image_name.png" class="media"></a>
-                <div class="media-overlay"></div>
-            </div>
-            
-            <!-- <div class="container" style="flex: 1.5;">
-                <a href="https://imtsybe.github.io/media/sampling_low.png" target="_blank"><img src="media/name_focus.gif" class="media" style="height: 100%; object-fit: cover;"></a>
-                <div class="media-overlay"></div>
-            </div> -->
+        <hr>
 
-            <div class="container" style="flex: 1;">
-                <a href="https://imtsybe.github.io/media/sampling_high.png" target="_blank"><img src="media/name_structure_editor.png" class="media"></a>
-                <div class="media-overlay"></div>
-            </div>
-            
-        </div> 
 
         <p>Channel packing allows to bake up to three white-and-black textures (like the Roughness, Metallic, or Alpha) as a single RGB, combining them into one texture instead of three separate. You can customize what texture map to have on which RGB channel, or which to left empty.</p>
 
         <p style="color: black;">{img of how channel packing works} {img of how the channels can be selected}</p>
-        
-        <p>Texture sharing / atlas bake is another useful feature of Auto Bake, which allows to bake multiple objects onto the same textures, just by enabling a single option.</p>
-        
-        <p style="color: black;">{mp4 of the bake process where on the left the objects are selected and on the right the base color is baked from one object then the next and the next}</p>
         
         <p>Different texture maps need to be used in different color-spaces, which by default should be changed one by one but Auto Bake will automatically set the correct one by default. Of course when you want to use a different color-space for a texture type, it can be changed with a single option.</p>
 
@@ -523,11 +504,29 @@
         </div> 
         
         
-        <p>Keeping the textures and preventing them from being lost can be done by either exporting them or the other method is packing them into the .blend file itself. The options are granted for both, or you can also assign a fake user automatically to the fake user.</p>
+        <p>Save the textures either by exporting them or by packing them into the .blend file itself with a single pack option enabled.</p>
         
         <p>Anti-aliasing can be enabled to apply to the baked textures. You can choose between to option methods, the upscaled where the texture is baked in a set higher resolution then scaled down, or the downscaled where the textures after the bake are scaled down and back up.</p>
         
-        <p>The default color of the textures can also be edited to any custom color, or also the alpha channel generation can also be enabled. These parts are only visible on the textures where nothing is baked, but can be used with low margin for chroma keying or other.</p>
+        <hr>
+
+        <p>Customize how the textures are named. Edit the basic name structure elements or further modify it from the name structure editor to change how the names are generated .</p>
+
+        <div class="media-row">
+            
+            <div class="container" style="flex: 1;">
+                <a href="https://imtsybe.github.io/media/image_name.png" target="_blank"><img src="media/image_name.png" class="media"></a>
+                <div class="media-overlay" style="font-size: 30px;">Basic Name Elements</div>
+            </div>
+            
+            <div class="container" style="flex: 1;">
+                <a href="https://imtsybe.github.io/media/name_elements.mp4" target="_blank"><video src="media/name_elements.mp4" class="media" style="object-fit: contain; height: 100%;" autoplay loop muted></video></a>
+                <div class="media-overlay" style="font-size: 30px;">Default Name Structure</div>
+            </div>
+            
+        </div> 
+
+        <p>Edit the defualt values of the textures, including the color, and wether to generate them alpha channels.</p>
 
     </div>
 
@@ -540,10 +539,7 @@
             <div class="header-text">SUPPORT</div>
         </div>
 
-        <p>When you purchase Auto Bake the support is guaranteed! If you have a question or run into an isseu, you can reach out to me at any given time either right here on Blender Market or on Discord. I will reply and try to provide help as fast I can.</p>
-            
-        <p>You can also get help from other community members of Auto Bake on its Discord support server. You can also check out the documentation when you run into an obsticle which contain a lot of useful information.</p>
-
+        <p>Get guaranteed support! Contact me any time, or join the discord community for help from the members, and get answers to your questions. Alternatively you can also check out the documentation for breakdowns and examples of the buttons and options for explanations.</p>
 
 <!-- https://support.blendermarket.com/article/20-how-to-get-product-support#:~:text=Contact%20the%20Creator%20Directly&text=When%20you%20click%20the%20Ask,notified%20of%20your%20support%20question. -->
 
@@ -558,9 +554,8 @@
             <div class="header-text">REVIEWS</div>
         </div>
 
-        <p>If you are sure what to think of Auto Bake, and whether to purchase it or not, I would recommend you the reviews of existing users, for the much appreciation for leaving a review!</p>
-
-
+        <p>Check out what existing users think, and what reviews they leave after using Auto Bake. Or check out the staff pick Auto Bake got from the Blender Market team in its first versions.</p>
+        
         <div class="media-row" style="align-items: stretch;">
 
             <div class="container" style="flex: 1;">
@@ -574,8 +569,6 @@
             </div>
 
         </div> 
-
-        <p>Auto Bake also got much highly appreciated love from the Blender Market team, when it was stuff picked, closely after it was released!</p>
 
     </div>
 
@@ -603,15 +596,15 @@
             <div class="header-text">AFFILIATE</div>
         </div>
 
-        <p>The affiliate program is open to creators interested in sharing Auto Bake with their audiences, whether through a simple spotlight or a more in-depth tutorial—both are welcome. If you're one of those creators, I encourage you to reach out to me using any of the following methods:</p>
+        <p>Join the affiliate program if you are a creator and share Auto Bake with your audience either in a format of post, blog, videos, spotlight, tutorials, etc. Become an affiliate by following any of the methods:</p>
 
         <ul class="p">
-            <li>Fill out the affiliate form, and I will reach out to you using the provided email address.</li>
-            <li>Email me directly at imtsybe@gmail.com.</li>
-            <li>Contact me on Discord, either by creating a ticket or sending a direct message.</li>
+            <li>Fill out an affiliate form, and I will reach back to you using the email address you provide</li>
+            <li>Email me directly at imtsybe@gmail.com</li>
+            <li>Contact me on Discord either by creating a ticket or sending a direct message</li>
         </ul>
 
-        <p>Creators are also provided with a set of promotional materials, including videos and images, which can be freely used in videos, blogs, or posts about Auto Bake. The kit can be downloaded as a zip file here!</p>
+        <p>Get access to a promotional kit, including vides and images, which you can freely use up in your content about Auto Bake. The kit can be downloaded as a zip file from here!</p>
 
         <hr class="line-below">
     </div>
