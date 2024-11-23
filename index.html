@@ -465,38 +465,21 @@
         
         <p style="color: black;">{mp4 of the bake process where on the left the objects are selected and on the right the base color is baked from one object then the next and the next}</p>
 
+        <p>Different texture maps need to be used in different color-spaces, which by default should be changed one by one but Auto Bake will automatically set the correct one by default. Of course when you want to use a different color-space for a texture type, it can be changed with a single option.</p>
+        
+        
+        <hr>
+        
         <p>Channel packing allows to bake up to three white-and-black textures (like the Roughness, Metallic, or Alpha) as a single RGB, combining them into one texture instead of three separate. You can customize what texture map to have on which RGB channel, or which to left empty.</p>
-
-        <div class="media-row">
-            <div class="container" style="flex: 1;">
-                <a href="https://imtsybe.github.io/media/" target="_blank"><img src="media/" class="media"></a>
-                <div class="media-overlay">Pack</div>
-            </div>
-            <div class="container" style="flex: 1;">
-                <a href="https://imtsybe.github.io/media/" target="_blank"><img src="media/" class="media"></a>
-                <div class="media-overlay">Fake User</div>
-            </div>
-        </div> 
-
-        
-        <p>The quality of the textures depend a lot on the used sampling settings when baking, but not for all the textures. Some texture maps do not require high settings at all, and only the bare minimum without any loss of quality. For this reason Auto Bake uses a split render sampling method, where two different render settings are used, one for the textures that not sample dependent, and the other that is. Of course this can also be disabled an a single setting can be used for all.</p>
         
         <div class="media-row">
             <div class="container" style="flex: 1;">
-                <a href="https://imtsybe.github.io/media/sampling_low.png" target="_blank"><img src="media/sampling_low.png" class="media"></a>
-                <div class="media-overlay">Sampling Low</div>
-            </div>
-            <div class="container" style="flex: 1;">
-                <a href="https://imtsybe.github.io/media/sampling_high.png" target="_blank"><img src="media/sampling_high.png" class="media"></a>
-                <div class="media-overlay">Sampling High</div>
+                <a href="https://imtsybe.github.io/media/channel_packing.png" target="_blank"><img src="media/channel_packing.png" class="media"></a>
+                <div class="media-overlay">Roughness + Specular + Ambient Occlusion</div>
             </div>
         </div> 
         
-        <p>Enable the packing option to embed the baked textures into the .blend file, or use the fake user option to automatically asign one to the textures, to prevent losing them even when they are not exported.</p>
-        
-        <p style="color: black;">{img of a texture node which is packed} {img of the texture node with fake user}</p>
-        
-        <p>Apply anti-aliasing to the baked textures! Choose between the upscaled method for slower but higher quality, or the downscaled method for faster but lossy quality. Both methods are adjustable.</p>
+        <p>Apply anti-aliasing to the baked textures! Use the upscaled method for higher quality, but uses more resource-intensive, or the downscaled method for faster but maybe with loss in details. Both methods can be adjusted bothe for the upscale and downscale rate.</p>
         
         <div class="aliasing-container">
             <div class="aliasing_slide">
@@ -515,28 +498,60 @@
                 const image = document.getElementById('aliasing-image');
                 image.src = src;
             }
-            </script>
+        </script>
+
+        <p>Use the split sampling option to bake only the textures with higher sampling settings that depend on the sample count. While some textures require high sampling settings for good quality, most of them don't depend on it and do result the exactly same quality with both low and high sampling settings.</p>
+        
+        <div class="media-row">
+            <div class="container" style="flex: 1;">
+                <a href="https://imtsybe.github.io/media/sampling_low.png" target="_blank"><img src="media/sampling_low.png" class="media"></a>
+                <div class="media-overlay">Sampling Low</div>
+            </div>
+            <div class="container" style="flex: 1;">
+                <a href="https://imtsybe.github.io/media/sampling_high.png" target="_blank"><img src="media/sampling_high.png" class="media"></a>
+                <div class="media-overlay">Sampling High</div>
+            </div>
+        </div> 
         
         <p>Customize how the textures are named. Edit the basic name elements for simple edit, or further modify how the names are constructed in the name structure editor.</p>
         
         <div class="media-row">
-            
             <div class="container" style="flex: 1;">
                 <a href="https://imtsybe.github.io/media/image_name.png" target="_blank"><img src="media/image_name.png" class="media"></a>
                 <div class="media-overlay" style="font-size: 25px;">Basic Name Elements</div>
             </div>
-            
             <div class="container" style="flex: 1;">
                 <a href="https://imtsybe.github.io/media/name_elements.mp4" target="_blank"><video src="media/name_elements.mp4" class="media" style="object-fit: contain; height: 100%;" autoplay loop muted></video></a>
                 <div class="media-overlay" style="font-size: 25px;">Default Name Structure</div>
             </div>
-            
         </div> 
-        
-        <p>Edit wether to use alpha channel, and the defualt color to use when creating the textures. This color will be visible on all the texture parts where nothing is baked.</p>
 
-        <p>Different texture maps need to be used in different color-spaces, which by default should be changed one by one but Auto Bake will automatically set the correct one by default. Of course when you want to use a different color-space for a texture type, it can be changed with a single option.</p>
+        <p>Enable the packing option to embed the baked textures into the .blend file, or use the fake user option to automatically asign one to the textures! Both to prevent losing them even if they are not exported.</p>
         
+        <div class="media-row">
+            <div class="container" style="flex: 1;">
+                <a href="https://imtsybe.github.io/media/texture_pack.png" target="_blank"><img src="media/texture_pack.png" class="media"></a>
+                <div class="media-overlay">Packed</div>
+            </div>
+            <div class="container" style="flex: 1;">
+                <a href="https://imtsybe.github.io/media/fake_user.png" target="_blank"><img src="media/fake_user.png" class="media"></a>
+                <div class="media-overlay">Fake User</div>
+            </div>
+        </div> 
+
+        <p>Edit wether to use alpha channel, and what should be the defualt color when creating the textures. This color will be visible on all the texture parts with no UV island, and where nothing is baked.</p>
+
+        <div class="media-row">
+            <div class="container" style="flex: 1;">
+                <a href="https://imtsybe.github.io/media/fill_color.mp4" target="_blank"><video src="media/fill_color.mp4" class="media" autoplay loop muted></video></a>
+                <div class="media-overlay">Default Color</div>
+            </div>
+            <div class="container" style="flex: 1;">
+                <a href="https://imtsybe.github.io/media/fill_example.png" target="_blank"><img src="media/fill_example.png" class="media"></a>
+                <div class="media-overlay">Example Texture</div>
+            </div>
+        </div> 
+
     </div>
     
     <div>
