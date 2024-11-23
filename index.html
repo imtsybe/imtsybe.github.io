@@ -141,38 +141,29 @@
                 <div class="slideshow_title">Curvature</div>
             </div>
             
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
-            
+            <a class="prev" style="left: 10px" onclick="plusSlides(-1)">❮</a>
+            <a class="next" style="right: 10px" onclick="plusSlides(1)">❯</a>
+
         </div>
             
         <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-        
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-        
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-        
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("map_slide");
-            let dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {slideIndex = 1}    
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
             }
-            for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
+            
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("map_slide");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                    }
+                slides[slideIndex-1].style.display = "block";  
             }
-            slides[slideIndex-1].style.display = "block";  
-            dots[slideIndex-1].className += " active";
-        }
         </script>
 
     </div> 
@@ -474,62 +465,80 @@
         
         <p style="color: black;">{mp4 of the bake process where on the left the objects are selected and on the right the base color is baked from one object then the next and the next}</p>
 
-
-
-
-            
-        <hr>
-
-
         <p>Channel packing allows to bake up to three white-and-black textures (like the Roughness, Metallic, or Alpha) as a single RGB, combining them into one texture instead of three separate. You can customize what texture map to have on which RGB channel, or which to left empty.</p>
 
-        <p style="color: black;">{img of how channel packing works} {img of how the channels can be selected}</p>
-        
-        <p>Different texture maps need to be used in different color-spaces, which by default should be changed one by one but Auto Bake will automatically set the correct one by default. Of course when you want to use a different color-space for a texture type, it can be changed with a single option.</p>
+        <div class="media-row">
+            <div class="container" style="flex: 1;">
+                <a href="https://imtsybe.github.io/media/" target="_blank"><img src="media/" class="media"></a>
+                <div class="media-overlay">Pack</div>
+            </div>
+            <div class="container" style="flex: 1;">
+                <a href="https://imtsybe.github.io/media/" target="_blank"><img src="media/" class="media"></a>
+                <div class="media-overlay">Fake User</div>
+            </div>
+        </div> 
 
+        
         <p>The quality of the textures depend a lot on the used sampling settings when baking, but not for all the textures. Some texture maps do not require high settings at all, and only the bare minimum without any loss of quality. For this reason Auto Bake uses a split render sampling method, where two different render settings are used, one for the textures that not sample dependent, and the other that is. Of course this can also be disabled an a single setting can be used for all.</p>
         
         <div class="media-row">
-            
             <div class="container" style="flex: 1;">
                 <a href="https://imtsybe.github.io/media/sampling_low.png" target="_blank"><img src="media/sampling_low.png" class="media"></a>
                 <div class="media-overlay">Sampling Low</div>
             </div>
-            
             <div class="container" style="flex: 1;">
                 <a href="https://imtsybe.github.io/media/sampling_high.png" target="_blank"><img src="media/sampling_high.png" class="media"></a>
                 <div class="media-overlay">Sampling High</div>
             </div>
-            
         </div> 
         
+        <p>Enable the packing option to embed the baked textures into the .blend file, or use the fake user option to automatically asign one to the textures, to prevent losing them even when they are not exported.</p>
         
-        <p>Save the textures either by exporting them or by packing them into the .blend file itself with a single pack option enabled.</p>
+        <p style="color: black;">{img of a texture node which is packed} {img of the texture node with fake user}</p>
         
-        <p>Anti-aliasing can be enabled to apply to the baked textures. You can choose between to option methods, the upscaled where the texture is baked in a set higher resolution then scaled down, or the downscaled where the textures after the bake are scaled down and back up.</p>
+        <p>Apply anti-aliasing to the baked textures! Choose between the upscaled method for slower but higher quality, or the downscaled method for faster but lossy quality. Both methods are adjustable.</p>
         
-        <hr>
-
-        <p>Customize how the textures are named. Edit the basic name structure elements or further modify it from the name structure editor to change how the names are generated .</p>
-
+        <div class="aliasing-container">
+            <div class="aliasing_slide">
+                <img id="aliasing-image" src="media/aliasing/off.png" class="media-aliasing">
+            </div>
+            
+            <div class="button-container">
+                <a class="aliasing button" onclick="changeImage('media/aliasing/off.png')">Off</a>
+                <a class="aliasing button" onclick="changeImage('media/aliasing/downscaled.png')">Downscaled</a>
+                <a class="aliasing button" onclick="changeImage('media/aliasing/upscaled.png')">Upscaled</a>
+            </div>
+        </div>
+        
+        <script>
+            function changeImage(src) {
+                const image = document.getElementById('aliasing-image');
+                image.src = src;
+            }
+            </script>
+        
+        <p>Customize how the textures are named. Edit the basic name elements for simple edit, or further modify how the names are constructed in the name structure editor.</p>
+        
         <div class="media-row">
             
             <div class="container" style="flex: 1;">
                 <a href="https://imtsybe.github.io/media/image_name.png" target="_blank"><img src="media/image_name.png" class="media"></a>
-                <div class="media-overlay" style="font-size: 30px;">Basic Name Elements</div>
+                <div class="media-overlay" style="font-size: 25px;">Basic Name Elements</div>
             </div>
             
             <div class="container" style="flex: 1;">
                 <a href="https://imtsybe.github.io/media/name_elements.mp4" target="_blank"><video src="media/name_elements.mp4" class="media" style="object-fit: contain; height: 100%;" autoplay loop muted></video></a>
-                <div class="media-overlay" style="font-size: 30px;">Default Name Structure</div>
+                <div class="media-overlay" style="font-size: 25px;">Default Name Structure</div>
             </div>
             
         </div> 
+        
+        <p>Edit wether to use alpha channel, and the defualt color to use when creating the textures. This color will be visible on all the texture parts where nothing is baked.</p>
 
-        <p>Edit the defualt values of the textures, including the color, and wether to generate them alpha channels.</p>
-
+        <p>Different texture maps need to be used in different color-spaces, which by default should be changed one by one but Auto Bake will automatically set the correct one by default. Of course when you want to use a different color-space for a texture type, it can be changed with a single option.</p>
+        
     </div>
-
+    
     <div>
         <hr class="line-below">
         <div class="header-top"></div>
@@ -565,7 +574,7 @@
 
             <div class="container" style="flex: 1;">
                 <a href="https://imtsybe.github.io/media/staff_pick.jpg" target="_blank"><img src="media/staff_pick.jpg" style="object-fit: contain; height: 100%;" class="media"></a>
-                <div class="media-overlay" style="font-size: 30px;">Staff Pick</div>
+                <div class="media-overlay">Staff Pick</div>
             </div>
 
         </div> 
