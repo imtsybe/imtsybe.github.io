@@ -463,22 +463,29 @@
 
         <p>Atlas textures is a tool to bake multiple object's onto the same, shared textures.</p>
         
+        <p>Atlas bake multiple </p>
+        
         <p style="color: black;">{mp4 of the bake process where on the left the objects are selected and on the right the base color is baked from one object then the next and the next}</p>
 
-        <p>Different texture maps need to be used in different color-spaces, which by default should be changed one by one but Auto Bake will automatically set the correct one by default. Of course when you want to use a different color-space for a texture type, it can be changed with a single option.</p>
-        
         
         <hr>
         
-        <p>Channel packing allows to bake up to three white-and-black textures (like the Roughness, Metallic, or Alpha) as a single RGB, combining them into one texture instead of three separate. You can customize what texture map to have on which RGB channel, or which to left empty.</p>
+        <p>Pack multiple grayscale textures into a single RGB image with the channel packing bake map. Select any of the grayscale maps and choose which to bake on what of the three available RGB channels.</p>
         
-        <div class="media-row">
+        <div class="media-row" style="margin-bottom: 5px">
             <div class="container" style="flex: 1;">
                 <a href="https://imtsybe.github.io/media/channel_packing.png" target="_blank"><img src="media/channel_packing.png" class="media"></a>
                 <div class="media-overlay">Roughness + Specular + Ambient Occlusion</div>
             </div>
         </div> 
         
+        <div class="media-row">
+            <div class="container" style="flex: 1;">
+                <a href="https://imtsybe.github.io/media/packing_types.png" target="_blank"><img src="media/packing_types.png" class="media"></a>
+                <div class="media-overlay">All Packable Texture Maps</div>
+            </div>
+        </div> 
+
         <p>Apply anti-aliasing to the baked textures! Use the upscaled method for higher quality, but uses more resource-intensive, or the downscaled method for faster but maybe with loss in details. Both methods can be adjusted bothe for the upscale and downscale rate.</p>
         
         <div class="aliasing-container">
@@ -512,7 +519,16 @@
                 <div class="media-overlay">Sampling High</div>
             </div>
         </div> 
-        
+
+        <p>Let the color space be handled automatically by Auto Bake for all the baked textures, or change the desired color space any time for any map type with a single option.</p>
+
+        <div class="media-row">
+            <div class="container" style="flex: 1;">
+                <a href="https://imtsybe.github.io/media/color_space.png" target="_blank"><img src="media/color_space.png" class="media" style="height: 100%; object-fit: cover;"></a>
+                <div class="media-overlay">Set Color Space</div>
+            </div>
+        </div> 
+
         <p>Customize how the textures are named. Edit the basic name elements for simple edit, or further modify how the names are constructed in the name structure editor.</p>
         
         <div class="media-row">
@@ -544,7 +560,7 @@
         <div class="media-row">
             <div class="container" style="flex: 1;">
                 <a href="https://imtsybe.github.io/media/fill_color.mp4" target="_blank"><video src="media/fill_color.mp4" class="media" autoplay loop muted></video></a>
-                <div class="media-overlay">Color Changing</div>
+                <div class="media-overlay">Default Color</div>
             </div>
             <div class="container" style="flex: 1;">
                 <a href="https://imtsybe.github.io/media/fill_example.png" target="_blank"><img src="media/fill_example.png" class="media"></a>
