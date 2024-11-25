@@ -23,7 +23,7 @@ hr.line-below {
     margin: 0px 0px 7.5px 0px;
 }
 
-.text-link {
+.p-link {
     color: #c28500ba;
 }
 
@@ -217,8 +217,6 @@ p, ul{
     gap: 3px;
     bottom: 50%;
     transform: translateY(50%);
-    flex-direction: column;
-    align-items: center;
 }
 
 .aliasing.button {
