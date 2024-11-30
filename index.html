@@ -52,7 +52,7 @@
             <div class="header-text">EASE OF USE</div>
         </div>
 
-        <p>Designed for both beginner and advanced Blender users, it requires minimal setup to start baking while offering extensive customization options. Buttons and options are neatly organized into categorized panels, with tooltips for guidance and <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/preferences/assorted#text-alerts" target="_blank" class="p-link">text alerts</a> for any misconfigurations. Comprehensive <a href="https://tsybe.gitbook.io/auto-bake" target="_blank" class="p-link">documentation</a> is included, guiding you through each step with clear instructions and examples.</p>
+        <p>Requires minimal setup to start baking while offering extensive customization options. Buttons and settings are neatly organized into panels, equipped with tooltips, <a href="https://tsybe.gitbook.io/auto-bake" target="_blank" class="p-link">documentation</a>, and <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/preferences/assorted#text-alerts" target="_blank" class="p-link">alerts</a> containing text information for any misconfigurations.</p>
 
         <div class="media-row">
             <div class="container" style="flex: 1;">
@@ -65,12 +65,12 @@
             </div>
             <div class="container" style="flex: 1;">
                 <a href="https://imtsybe.github.io/media/text_alert.png" target="_blank"><img src="media/text_alert.png" class="media"></a>
-                <div class="media-overlay">Text Alerts</div>
+                <div class="media-overlay">Alert</div>
             </div>
         </div>
 
     </div>
-    
+
     <div>
         <hr class="line-below">
         <div class="header-top"></div>
@@ -217,6 +217,84 @@
 
     </div>
     
+    <div>
+        <hr class="line-below">
+        <div class="header-top"></div>
+        
+        <div class="header">
+            <img src="media/arrows.png" alt="" class="header-image" >
+            <div class="header-text">CHANNEL PACKING</div>
+        </div>
+    
+        <p>Pack multiple grayscale textures into a single RGB image using the channel packing bake map. Select any of the grayscale maps and choose which one to bake onto each of the three available RGB channels.</p>
+        
+        <div class="media-row" style="margin-bottom: 5px">
+            <div class="container" style="flex: 1;">
+                <a href="https://imtsybe.github.io/media/packing_types.png" target="_blank"><img src="media/packing_types.png" class="media"></a>
+                <div class="media-overlay">All Packable Texture Maps</div>
+            </div>
+        </div> 
+        
+        <div class="media-row">
+            <div class="container" style="flex: 1;">
+                <a href="https://imtsybe.github.io/media/channel_packing.png" target="_blank"><img src="media/channel_packing.png" class="media"></a>
+                <div class="media-overlay">Roughness + Specular + Ambient Occlusion</div>
+            </div>
+        </div> 
+    </div> 
+    
+    <div>
+        <hr class="line-below">
+        <div class="header-top"></div>
+        
+        <div class="header">
+            <img src="media/arrows.png" alt="" class="header-image" >
+            <div class="header-text">ANTI-ALIASING</div>
+        </div>
+
+        <p>Apply <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/image/texture#anti-aliasing" target="_blank" class="p-link">anti-aliasing</a> to the baked textures! Use the <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/image/texture#upscaled" target="_blank" class="p-link">upscaled method</a> for higher quality, though more resource-intensive, or the <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/image/texture#downscaled" target="_blank" class="p-link">downscaled method</a> for faster baking with a potential loss in detail. Both methods can be adjusted for both the upscale and downscale rates.</p>
+        
+        <div class="aliasing-container">
+            <div class="aliasing_slide">
+                <img id="aliasing-image" src="media/aliasing/off.png" class="media-aliasing">
+            </div>
+            
+            <div class="button-container">
+                <a class="aliasing button" onclick="changeImage('media/aliasing/off.png')">Off</a>
+                <a class="aliasing button" onclick="changeImage('media/aliasing/downscaled.png')">Downscaled</a>
+                <a class="aliasing button" onclick="changeImage('media/aliasing/upscaled.png')">Upscaled</a>
+            </div>
+        </div>
+        
+        <script>
+            function changeImage(src) {
+                const image = document.getElementById('aliasing-image');
+                image.src = src;
+            }
+        </script>
+
+    </div>
+
+    <div>
+        <hr class="line-below">
+        <div class="header-top"></div>
+        
+        <div class="header">
+            <img src="media/arrows.png" alt="" class="header-image" >
+            <div class="header-text">ATLAS BAKE</div>
+        </div>
+
+        <p>Enable the <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/image/texture#shared" target="_blank" class="p-link">atlas mode</a> to bake multiple objects onto shared textures without merging the objects. After the bake, a single material with the baked textures can be applied to all the baked objects.</p>
+
+        <div class="media-row">
+            <div class="container">
+                <a href="https://imtsybe.github.io/media/atlas_texture.png" target="_blank"><img src="media/atlas_texture.png" class="media"></a>
+                <div class="media-overlay" style="font-size: 30px;">Atlas Baked Objects</div>
+            </div>
+        </div>
+
+    </div>
+
     <div>
         <hr class="line-below">
         <div class="header-top"></div>
@@ -484,53 +562,7 @@
         
         <div class="header">
             <img src="media/arrows.png" alt="" class="header-image" >
-            <div class="header-text">TEXTURE TOOLS</div>
-        </div>
-
-        <p>Pack multiple grayscale textures into a single RGB image using the channel packing bake map. Select any of the grayscale maps and choose which one to bake onto each of the three available RGB channels.</p>
-        
-        <div class="media-row" style="margin-bottom: 5px">
-            <div class="container" style="flex: 1;">
-                <a href="https://imtsybe.github.io/media/packing_types.png" target="_blank"><img src="media/packing_types.png" class="media"></a>
-                <div class="media-overlay">All Packable Texture Maps</div>
-            </div>
-        </div> 
-
-        <div class="media-row">
-            <div class="container" style="flex: 1;">
-                <a href="https://imtsybe.github.io/media/channel_packing.png" target="_blank"><img src="media/channel_packing.png" class="media"></a>
-                <div class="media-overlay">Roughness + Specular + Ambient Occlusion</div>
-            </div>
-        </div> 
-
-        <p>Apply <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/image/texture#anti-aliasing" target="_blank" class="p-link">anti-aliasing</a> to the baked textures! Use the <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/image/texture#upscaled" target="_blank" class="p-link">upscaled method</a> for higher quality, though more resource-intensive, or the <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/image/texture#downscaled" target="_blank" class="p-link">downscaled method</a> for faster baking with a potential loss in detail. Both methods can be adjusted for both the upscale and downscale rates.</p>
-        
-        <div class="aliasing-container">
-            <div class="aliasing_slide">
-                <img id="aliasing-image" src="media/aliasing/off.png" class="media-aliasing">
-            </div>
-            
-            <div class="button-container">
-                <a class="aliasing button" onclick="changeImage('media/aliasing/off.png')">Off</a>
-                <a class="aliasing button" onclick="changeImage('media/aliasing/downscaled.png')">Downscaled</a>
-                <a class="aliasing button" onclick="changeImage('media/aliasing/upscaled.png')">Upscaled</a>
-            </div>
-        </div>
-        
-        <script>
-            function changeImage(src) {
-                const image = document.getElementById('aliasing-image');
-                image.src = src;
-            }
-        </script>
-
-        <p>Enable the <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/image/texture#shared" target="_blank" class="p-link">atlas mode</a> to bake multiple objects onto the same shared textures, which all of them can use from a single material.</p>
-
-        <div class="media-row">
-            <div class="container">
-                <a href="https://imtsybe.github.io/media/atlas_texture.png" target="_blank"><img src="media/atlas_texture.png" class="media"></a>
-                <div class="media-overlay" style="font-size: 30px;">Atlas Baked Objects</div>
-            </div>
+            <div class="header-text">SAMPLING</div>
         </div>
 
         <p>Use the <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/settings/sampling" target="_blank" class="p-link">split sampling option</a> to bake only textures that require higher sampling settings for good results, optimizing both time and resources. While some textures need high sampling for quality, most achieve identical results with lower sampling settings.</p>
@@ -545,8 +577,18 @@
                 <div class="media-overlay">Sampling High</div>
             </div>
         </div> 
+    </div>
 
-        <p>Let Auto Bake handle the color space automatically for all baked textures, or <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/bake-list/list-items#color-space" target="_blank" class="p-link">adjust the color space</a> for any map type at any time with a single option.</p>
+    <div>
+        <hr class="line-below">
+        <div class="header-top"></div>
+        
+        <div class="header">
+            <img src="media/arrows.png" alt="" class="header-image" >
+            <div class="header-text">COLOR SPACE</div>
+        </div>
+
+        <p>Let Auto Bake handle the color space automatically for all the baked textures, or <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/bake-list/list-items#color-space" target="_blank" class="p-link">adjust the color space</a> for any map type at any time with a single option.</p>
 
         <div class="media-row">
             <div class="container" style="flex: 1;">
@@ -555,19 +597,17 @@
             </div>
         </div> 
         
-        <p>Enable the <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/image/texture#pack" target="_blank" class="p-link">packing option</a> to embed baked textures into the .blend file, or use the <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/image/texture#fake-user" target="_blank" class="p-link">fake user option</a> to automatically assign one to the textures, both ensuring they won't be lost, even if not exported.</p>
-        
-        <div class="media-row">
-            <div class="container" style="flex: 1;">
-                <a href="https://imtsybe.github.io/media/texture_pack.png" target="_blank"><img src="media/texture_pack.png" class="media"></a>
-                <div class="media-overlay">Packed Texture</div>
-            </div>
-            <div class="container" style="flex: 1;">
-                <a href="https://imtsybe.github.io/media/fake_user.png" target="_blank"><img src="media/fake_user.png" class="media"></a>
-                <div class="media-overlay">Fake User</div>
-            </div>
-        </div> 
+    </div>
 
+    <div>
+        <hr class="line-below">
+        <div class="header-top"></div>
+        
+        <div class="header">
+            <img src="media/arrows.png" alt="" class="header-image" >
+            <div class="header-text">NAME</div>
+        </div>
+    
         <p>Customize how the textures are named by editing the <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/image/name" target="_blank" class="p-link">basic name elements</a> for quick changes, or use the <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/image/name#name-structure-editor" target="_blank" class="p-link">name structure editor</a> for more advanced modifications, which will be shared across all .blend files.</p>
         
         <div class="media-row">
@@ -580,6 +620,39 @@
                 <div class="media-overlay" style="font-size: 25px;">Default Name Structure</div>
             </div>
         </div> 
+    </div> 
+
+    <div>
+        <hr class="line-below">
+        <div class="header-top"></div>
+        
+        <div class="header">
+            <img src="media/arrows.png" alt="" class="header-image" >
+            <div class="header-text">PACK & USERS</div>
+        </div>
+
+        <p>Enable the <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/image/texture#pack" target="_blank" class="p-link">packing option</a> to embed baked textures into the .blend file, or use the <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/elements/image/texture#fake-user" target="_blank" class="p-link">fake user option</a> to automatically assign one to the textures, both ensuring they won't be lost, even if not exported.</p>
+        
+        <div class="media-row">
+            <div class="container" style="flex: 1;">
+                <a href="https://imtsybe.github.io/media/texture_pack.png" target="_blank"><img src="media/texture_pack.png" class="media"></a>
+                <div class="media-overlay">Packed Texture</div>
+            </div>
+            <div class="container" style="flex: 1;">
+                <a href="https://imtsybe.github.io/media/fake_user.png" target="_blank"><img src="media/fake_user.png" class="media"></a>
+                <div class="media-overlay">Fake User</div>
+            </div>
+        </div> 
+    </div> 
+
+    <div>
+        <hr class="line-below">
+        <div class="header-top"></div>
+        
+        <div class="header">
+            <img src="media/arrows.png" alt="" class="header-image" >
+            <div class="header-text">COLOR & ALPHA</div>
+        </div>
 
         <p>Edit whether to create an <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/preferences/default-image#alpha" target="_blank" class="p-link">alpha channel</a>, and set the <a href="https://tsybe.gitbook.io/auto-bake/documentation/user-manual/preferences/default-image#fill-color" target="_blank" class="p-link">default color</a> to use when creating the textures. This color will appear on areas with no UV islands and where nothing is baked.</p>
 
