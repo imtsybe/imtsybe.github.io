@@ -99,7 +99,7 @@ p, ul{
 }
 
 .container {
-    border: 2px solid #fa912bc7;
+    border: 3px solid #fa912bc7;
     background-color: #fa912bc7;
     border-radius: 8px;
     overflow: hidden;
@@ -147,7 +147,7 @@ p, ul{
 
 .slideshow-container,
 .aliasing-container {
-    border: 2px solid #fa8d2bc7;
+    border: 3px solid #fa8d2bc7;
     background-color: #fa8d2bc7;
     border-radius: 8px;
     overflow: hidden;
